@@ -1,0 +1,230 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*---------------- Reset CSS -------------------*/
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #666;
+	background-color: rgb(232, 229, 229);
+}
+
+	
+/*---------------- Navbar -------------------*/	
+#navbar{
+	position: relative;
+	height: auto;
+}	
+	
+#navbar ul{
+	width: 100%;
+	height: 30px;
+	background-color: #007f49;
+	border-top: 3px solid #ffaf34;
+	border-bottom: 2px solid #CCC;
+}	
+	
+#navbar ul li{
+	float: left;
+	list-style: none;
+	width: auto;
+	height: 30px;
+	line-height: 30px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: capitalize;
+	padding: 0px 12px;
+}
+	
+#navbar ul li:hover a{
+	color: #28a801;
+	font-weight: bold;
+	cursor: pointer;
+}			
+
+#navbar ul li a{
+	text-decoration:none;
+	color: #ffffff;
+}	
+
+
+/*---------------- Wrapper -------------------*/	
+#wrapper{
+	width: 1000px;
+	height: auto;
+	margin: 30px auto;
+}	
+
+#header{
+	width: 1000px;
+	height: auto;
+	background: #007f49;
+}
+
+	
+/*---------------- Banner -------------------*/	
+#banner{
+	width: 960px;
+	height: auto;
+	padding: 20px;
+	border-bottom: 1px solid #CCC;
+}
+
+/*---------------- Body -------------------*/		
+#body{
+	width: 960px;
+	height: auto;
+	padding: 20px;
+	background: #d3d3d3;
+}
+	
+#body h2{
+	width: 940px;
+	height: 35px;
+	line-height: 35px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: #FFF;
+	text-transform: capitalize;
+	background: #007f49;
+	padding: 0px 10px;
+}		
+
+#main{
+	width: 938px;
+	height: auto;
+	font-weight: bold;
+	border: 1px solid #ffffff;
+	padding: 20px 10px;
+	margin-top: 10px;
+}
+
+/*------------------ Footer-----------------*/
+footer {
+	width: 100%;
+	height: auto;
+	background: #007f49;
+	border-bottom: 15px solid #ffaf34;
+	margin-top: 35px;
+	text-align: center;
+	position: bottom left;
+	
+}
+	
+footer h4{
+	height: auto;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: #ffffff;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	padding-top: 10px;
+}		
+
+footer p{
+	height: auto;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFF;
+	padding: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
