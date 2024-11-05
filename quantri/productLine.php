@@ -13,22 +13,22 @@
 
 <link rel="stylesheet" type="text/css" href="css/productLine.css" />
 
-<h2>Product Line Manager</h2>
+<h2>Quản lí phân loại sản phẩm</h2>
 
 <div id="main">
 
 	<p id="add-prdline">
-        <a href="index.php?page_layout=addProduct">
-            <span>Add Product Line</span>
+        <a href="index.php?page_layout=addProductLine">
+            <span>Thêm loại hàng</span>
         </a>
     </p>
     
 	<table id="prdline" cellpadding="0" cellspacing="0" width="100%">
     	<tr id="prdline-bar">
         	<td width="10%">ID</td>
-            <td width="70%">Name of product</td>
-            <td width="10%">Fix</td>
-            <td width="10%">Delete</td>
+            <td width="70%">Tên loại hàng</td>
+            <td width="10%">Sửa</td>
+            <td width="10%">Xóa</td>
         </tr>
         <?php
             if($result1->num_rows > 0){
@@ -49,7 +49,7 @@
                     </a>
                 </td>
                 <td>
-                    <a href="deleteProduct.php?productLineId=<?php echo $row['productLineId'];?>">
+                    <a href="deleteProductLine.php?productLineId=<?php echo $row['productLineId'];?>">
                         <span>Delete</span>
                     </a>
                 </td>

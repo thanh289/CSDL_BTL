@@ -13,25 +13,25 @@
 
 <link rel="stylesheet" type="text/css" href="css/product.css" />
 
-<h2>Product Manager</h2>
+<h2>Quản lí sản phẩm</h2>
 
 <div id="main">
 
 	<p id="add-prd">
         <a href="index.php?page_layout=addProduct">
-            <span>Add Product</span>
+            <span>Thêm sản phẩm</span>
         </a>
     </p>
 
 	<table id="prds" cellpadding="0" cellspacing="0" width="100%">
     	<tr id="prd-bar">
         	<td width="5%">ID</td>
-            <td width="40%">Name of product</td>
-            <td width="15%">Price</td>
-            <td width="20%">Product Line</td>
-            <td width="10%">Image</td>
-            <td width="4%">Fix</td>
-            <td width="6%">Delete</td>
+            <td width="40%">Tên sản phẩm</td>
+            <td width="15%">Giá</td>
+            <td width="20%">Phân loại</td>
+            <td width="10%">Ảnh</td>
+            <td width="4%">Sửa</td>
+            <td width="6%">Xóa</td>
         </tr>
         <?php
             if($result1->num_rows > 0){

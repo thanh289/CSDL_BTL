@@ -1,23 +1,23 @@
 @charset "utf-8";
 /* CSS Document */
 
-table#add-prd{
+table#fix-prd{
 	width:938px;
 	height:auto;
-	}
+}
 	
-table#add-prd tr td{
+table#fix-prd tr td{
 	padding-bottom:10px;
-	}
+}
 	
-table#add-prd tr td label{
+table#fix-prd tr td label{
 	font-weight:bold;
-	color:#840000;
-	}		
+	color:#c18400;
+}	
 
-table#add-prd tr td input[type="text"]{
+table#fix-prd tr td input[type="text"]{
 	width:300px;
-	}
+}
 
 
 

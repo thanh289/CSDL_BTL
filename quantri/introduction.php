@@ -1,4 +1,4 @@
-<h2>Introduction</h2>
+<h2>Giới thiệu</h2>
 <div id="main">
 <p>
     Introduction.

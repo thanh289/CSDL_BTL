@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+table#add-prdline{
+	width:938px;
+	height:auto;
+}
+	
+table#add-prdline tr td{
+	padding-bottom:10px;
+}
+	
+table#add-prdline tr td label{
+	font-weight:bold;
+	color:#c18400;
+}		
+
+table#add-prdline tr td input[type="text"]{
+	width:300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

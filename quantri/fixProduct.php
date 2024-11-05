@@ -9,29 +9,31 @@
 ?>
 
     <link rel="stylesheet" type="text/css" href="css/fixProduct.css"/>
-    <h2>Fix Product</h2>
+    <h2>Sửa sản phẩm</h2>
 
     <div id="main">
         <form method="post" enctype="multipart/form-data">
-        <table id="add-prd" cellpadding="0" cellspacing="0">
+        <!-- Table -->
+        <table id="fix-prd" cellpadding="0" cellspacing="0">
+            <!-- Product Name -->
             <tr>
                 <td>
-                    <label>Name Of Product</label><br/>
+                    <label>Tên sản phẩm</label><br/>
                     <input type="text" name="productName" value="<?php if(isset($_POST['productName'])){echo $_POST['productName'];}else{echo $arr['productName'];}?>" />
                 </td>
                 <?php if(isset($error_productName)){echo $error_productName;}?>
             </tr>
-
+            <!-- Image -->
             <tr>
                 <td>
-                    <label>Image</label><br/>
-                    <input type="file" name="productImage1"/><br/>
+                    <label>Ảnh minh họa</label><br/>
+                    <input type="file" name="productImage1"/><br/><br/>
                     <input type="text" name="productImage2" value="<?php echo $arr['productImage'];?>"/>
                 </td>
             </tr>
-
+            <!-- Product Line -->
             <tr>
-                <td><label>Product Line</label><br/>
+                <td><label>Phân loại</label><br/>
                     <select name="productLineId">
                         <?php
                             $sqlDm = "SELECT * FROM productLine";
@@ -49,73 +51,65 @@
                     </select>	
                 </td>
             </tr>
-
+            <!-- Price -->
             <tr>
                 <td>
-                    <label>Price</label><br/>
+                    <label>Giá</label><br/>
                     <input type="text" name="productPrice" value="<?php if(isset($_POST['productPrice'])){echo $_POST['productPrice'];}else{echo $arr['productPrice'];}?>" /> VND
                     <?php if(isset($error_price)){echo $error_price;}?>
                 </td>
             </tr>
-
+            <!-- Guarantee -->
             <tr>
-                <td><label>Guarantee</label><br/>
+                <td><label>Bảo hành</label><br/>
                 <input type="text" name="guarantee" value="<?php  if(isset($_POST['guarantee'])){echo $_POST['guarantee'];}else{echo $arr['guarantee'];}?>" />
                 </td>
                 <?php if(isset($error_guarantee)){echo $error_guarantee;}?>
             </tr>
-
+            <!-- Accessory -->
             <tr>
-                <td><label>Accessory</label><br/>
+                <td><label>Phụ kiện</label><br/>
                 <input type="text" name="accessory" value="<?php if(isset($_POST['accessory'])){echo $_POST['accessory'];}else{echo $arr['accessory'];}?>" />
                 </td>
                 <?php if(isset($error_accessory)){echo $error_accessory;}?>
             </tr>
-
+            <!-- Discount -->
             <tr>
                 <td>
-                    <label>Status</label><br/>
-                    <input type="text" name="status1" value="<?php if(isset($_POST['status1'])){echo $_POST['status1'];}else{echo $arr['status1'];}?>" />
-                </td>
-                <?php if(isset($error_status1)){echo $error_status1;}?>
-            </tr>
-
-            <tr>
-                <td>
-                    <label>Discount</label><br/>
+                    <label>Khuyến mãi</label><br/>
                     <input type="text" name="promotion" value="<?php if(isset($_POST['promotion'])){echo $_POST['promotion'];}else{echo $arr['promotion'];}?>" />
                 </td>
                 <?php if(isset($error_promotion)){echo $error_promotion;}?>
             </tr>
-
+            <!-- In Stock -->
             <tr>
                 <td>
-                    <label>In stock</label><br/>
-                    <input type="text" name="status2" value="<?php if(isset($_POST['status2'])){echo $_POST['status2'];}else{echo $arr['status2'];}?>" />
-                </td>
-                <?php if(isset($error_status2)){echo $error_status2;}?>
-            </tr>
-
-            <tr>
-                <td><label>Special</label><br/>
-                Yes <input type="radio" name="special" value=1 <?php if($arr['special']==1){echo 'checked';} ?>/> 
-                No <input type="radio" name="special" value=0 <?php if($arr['special']==0){echo 'checked';} ?>/>
+                    <label>Còn hàng</label><br/>
+                    Còn <input type="radio" name="inStock" value=1 <?php if($arr['inStock']==1){echo 'checked';} ?>/> 
+                    Hết <input type="radio" name="inStock" value=0 <?php if($arr['inStock']==0){echo 'checked';} ?>/>
                 </td>
             </tr>
-
+            <!-- Special -->
             <tr>
                 <td>
-                    <label>Detail</label><br/>
-                    <textarea cols="60" rows="12" name="detail">
-                        <?php if(isset($_POST['detail'])){echo $_POST['detail'];}else{echo $arr['detail'];}?>
+                    <label>Hàng đặc biệt</label><br/>
+                    Có <input type="radio" name="special" value=1 <?php if($arr['special']==1){echo 'checked';} ?>/> 
+                    Không <input type="radio" name="special" value=0 <?php if($arr['special']==0){echo 'checked';} ?>/>
+                </td>
+            </tr>
+            <!-- Detail -->
+            <tr>
+                <td>
+                    <label>Mô tả</label><br/>
+                    <textarea cols="60" rows="12" name="detail"><?php if(isset($_POST['detail'])){echo $_POST['detail'];}else{echo $arr['detail'];}?>
                     </textarea>
                 </td>
                 <?php if(isset($error_detail)){echo $error_detail;}?>
             </tr>
-
+            <!-- Submit and Reset Button -->
             <tr>
                 <td>
-                    <input type="submit" name="submit" value="Update"/> 
+                    <input type="submit" name="submit" value="Sửa"/> 
                     <input type="reset" name="reset" value="Refresh">
                 </td>
             </tr>
@@ -133,8 +127,7 @@
     // Hit submit button to confirm fixing
     if(isset($_POST['submit'])){
 
-        //  Error go here
-        //  If not then take the information
+        //  Product Name error or take value
         if($_POST['productName'] == ''){
             $error_productName = '<span style="color:red;">(*)<span>';
         }else{
@@ -150,66 +143,52 @@
             $tmp = $_FILES['productImage1']['tmp_name'];
         }
 
+        //  Product Line Id take value
         $productLineId = $_POST['productLineId'];
 
+        //  Product Price error or take value
         if($_POST['productPrice'] == ''){
             $error_price = '<span style="color:red;">(*)<span>';
         }else{
             $productPrice  = $_POST['productPrice'];
         }
 
+        //  Product Guarantee error or take value
         if($_POST['guarantee'] == ''){
             $error_guarantee = '<span style="color:red;">(*)<span>';
         }else{
             $guarantee = $_POST['guarantee'];
         }
 
+        //  Product Accessory error or take value
         if($_POST['accessory'] == ''){
             $error_accessory = '<span style="color:red;">(*)<span>';
         }else{
             $accessory = $_POST['accessory'];
         }
 
-        if($_POST['status1'] == ''){
-            $error_status1 = '<span style="color:red;">(*)<span>';
-        }else{
-            $status1 = $_POST['status1'];
-        }
-
+        //  Product Promotion error or take value
         if($_POST['promotion'] == ''){
             $error_promotion = '<span style="color:red;">(*)<span>';
         }else{
             $promotion = $_POST['promotion'];
         }
 
-        if($_POST['status2'] == ''){
-            $error_status2 = '<span style="color:red;">(*)<span>';
-        }else{
-            $status2 = $_POST['status2'];
-        }
-
+        //  Product Detail error or take value
         if($_POST['detail'] == ''){
             $error_detail = '<span style="color:red;">(*)<span>';
         }else{
             $detail = $_POST['detail'];
         }
 
+        //  Product In Stock error or take value
+        $inStock = $_POST['inStock'];
+
+        //  Product Special take value
         $special = $_POST['special'];
 
-        // echo $productName . "<br>";
-        // echo $productImage . "<br>";
-        // echo $productLineId . "<br>";
-        // echo $productPrice . "<br>";
-        // echo $guarantee . "<br>";
-        // echo $accessory . "<br>";
-        // echo $status1 . "<br>";
-        // echo $promotion . "<br>";
-        // echo $status2 . "<br>";
-        // echo $detail . "<br>";
-        // echo $special . "<br>";
-
-        //  update in mysql go here
-        if(isset($productName) && isset($productPrice) && isset($guarantee) && isset($accessory) && isset($status1) && isset($promotion) && isset($status2) && isset($detail)){
+        //  Check and Update MySQL
+        if(isset($productName) && isset($productPrice) && isset($guarantee) && isset($accessory) && isset($promotion) && isset($inStock) && isset($detail)){
             if($_FILES['productImage1']['name'] != ""){
                 move_uploaded_file($tmp, 'image/'.$productImage);
             }  
@@ -219,9 +198,8 @@
                                             productPrice = '$productPrice',
                                             guarantee = '$guarantee',
                                             accessory = '$accessory',
-                                            status1 = '$status1',
                                             promotion = '$promotion',
-                                            status2 = '$status2', 
+                                            inStock = $inStock, 
                                             special = $special,
                                             detail = '$detail'
                                     WHERE   productId = $productId";
