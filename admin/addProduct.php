@@ -70,15 +70,18 @@
         
         
         //  Check and Insert into MySQL
-        if(isset($productName) && isset($productPrice) && isset($guarantee) && isset($accessory) && isset($promotion) && isset($inStock) && isset($detail) && isset($productImage) && isset($productLineId) && isset($special)){
+        if(isset($productName) && isset($productPrice) && isset($guarantee) && isset($accessory) && isset($promotion) && is_numeric($inStock) && isset($detail) && isset($productImage) && is_numeric($productLineId) && is_numeric($special)){
             move_uploaded_file($tmp, 'image/'.$productImage);
-            $sql = "INSERT INTO product (productName, productPrice, guarantee, accessory, promotion, inStock, detail, productImage, productLineId, special) 
-                    VALUES ('$productName', '$productPrice', '$guarantee', '$accessory', '$promotion', '$inStock', '$detail', '$productImage', $productLineId, $special)";
-            if ($conn->query($sql) === TRUE) {
+            $sql = "INSERT INTO product (productName, productPrice, guarantee, accessory, promotion, detail, productImage, productLineId, inStock, special) 
+                VALUES ('$productName', '$productPrice', '$guarantee', '$accessory', '$promotion', '$detail', '$productImage', $productLineId, $inStock, $special)";
+            
+            if ($conn->query($sql) == TRUE) {
                 echo "Thêm thành công!";
             } else {
                 echo "Error updating record: " . $conn->error;
             }
+        } else {
+            echo "dumb";
         }
     }
 ?>
@@ -163,16 +166,16 @@
         <tr>
         	<td>
                 <label>Còn hàng</label><br/>
-                Còn <input checked="checked" type="radio" name="inStock" value=1/> 
-                Hết <input type="radio" name="inStock" value=0/>
+                Còn <input checked="checked" type="radio" name="inStock" value=1> 
+                Hết <input type="radio" name="inStock" value=0>
             </td>
         </tr>
         <!-- Special -->
         <tr>
         	<td>
                 <label>Hàng đặc biệt</label><br/>
-                Có <input type="radio" name="special" value=1/> 
-                Không <input checked="checked" type="radio" name="special" value=0/>
+                Có <input type="radio" name="special" value=1> 
+                Không <input checked="checked" type="radio" name="special" value=0>
             </td>
         </tr>
         <!-- Detail -->

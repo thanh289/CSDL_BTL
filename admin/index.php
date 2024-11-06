@@ -10,7 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin</title>
     <link rel="stylesheet" type="text/css" href="css/index.css" />
 </head>
 
@@ -26,6 +26,13 @@
     </div>
 
     <div id="wrapper">
+        <div id="header">
+            <!-- <form method="post" name="sform" action="index.php?page_layout=search">
+                <input type="submit" name="sbutton" value="" />
+                <input type="text" name="stext" placeholder="Tìm kiếm sản phẩm"/>
+            </form> -->
+        </div>
+
         <div id="body">
             <?php
             if(isset($_GET['page_layout'])){
