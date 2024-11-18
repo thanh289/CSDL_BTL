@@ -7,14 +7,22 @@ h2 .skeyword{
 }
 
 #pagination{
-	width:720px;
-	height:auto;
-	font-family:Verdana, Geneva, sans-serif;
-	font-size:12px;
-	font-weight:bold;
-	word-spacing:5px;
-	text-align:right;
-	margin-right:20px;
-	margin-bottom:20px;
-	}
+	width: 870px;
+	height: auto;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	word-spacing: 5px;
+	text-align: right;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
 	
+#pagination span{
+	color: #007f49;
+}	
+	
+#pagination a{
+	text-decoration: none;
+	color: #000;
+}	

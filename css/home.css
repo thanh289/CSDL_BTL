@@ -270,12 +270,12 @@ body{
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 12px;
 	font-weight: bold;
-	color: #ddb902;
+	color: #ffd608;
 }
 	
 .prd-item p.price span{
 	padding: 5px 10px;
-	background: rgba(60, 57, 0, 0.5);
+	background: rgba(10, 125, 46, 0.5);
 	border-radius: 40px 40px 40px 40px;
 	}	
 
