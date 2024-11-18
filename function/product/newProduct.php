@@ -9,7 +9,7 @@
         ?>
                 <div class="prd-item">
                     <a href="index.php?page_layout=productDetail&productId=<?php echo $row['productId'] ?>">
-                        <img width="80" height="144" src="admin/image/<?php echo $row['productImage'] ?>" />
+                        <img width="208" height="200" src="admin/image/<?php echo $row['productImage'] ?>" />
                     </a>
                     <h3>
                         <a href="index.php?page_layout=productDetail&productId=<?php echo $row['productId'] ?>">

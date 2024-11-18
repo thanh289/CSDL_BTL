@@ -83,34 +83,34 @@ body{
 
 #cart{
 	position: absolute;
-	width:40px;
-	height:40px;
-	background:url(../image/shopping-cart.png) top  left no-repeat;
-	top:-3px;
-	left:767px;
-	padding-top:40px;
+	width: 40px;
+	height: 40px;
+	background: url(../image/shopping-cart.png) top  left no-repeat;
+	top: -3px;
+	left: 767px;
+	padding-top: 40px;
 	}
 
 #cart p{
-	width:213px;
-	height:auto;
-	font-family:Verdana, Geneva, sans-serif;
-	font-size:12px;
-	text-align:center;
-	color:#FFF;
+	width: 213px;
+	height: auto;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	text-align: center;
+	color: #FFF;
 	}
 	
 #cart p span{
-	font-weight:bold;
-	color:#FF0;
+	font-weight: bold;
+	color: #FF0;
 	}	
 
 #cart p a{
-	font-family:Verdana, Geneva, sans-serif;
-	font-size:12px;
-	text-decoration:none;
-	color:#FF0;
-	font-weight:bold;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+	color: #FF0;
+	font-weight: bold;
 	}
 
 	
@@ -118,20 +118,20 @@ body{
 
 /*---------- Wrapper----------*/	
 #wrapper{
-	width:1000px;
-	height:auto;
-	margin:30px auto;
-	margin-bottom:0px;
+	width: 1500px;
+	height: auto;
+	margin: 30px 20px;
+	margin-bottom: 0px;
 	}
 
 
 /*---------- Body----------*/
 #body{
-	overflow:hidden;
-	width:1000px;
-	height:auto;
-	background:#FFF;
-	padding:20px 0px;
+	overflow: hidden;
+	width: 1400px;
+	height: auto;
+	background: #FFF;
+	padding: 20px 0px;
 	}
 
 /*---------- Left Sidebar----------*/
@@ -139,7 +139,7 @@ body{
 	float: left;
 	width: 220px;
 	height: auto;
-	padding-left: 20px;
+	padding-left: 80px;
 }
 .l-sidebar{
 	width: 218px;
@@ -198,7 +198,7 @@ body{
 /*---------- Right Sidebar----------*/
 #r-col{
 	float: right;
-	width: 700px;
+	width: 950px;
 	height: auto;
 	padding-left: 20px;
 }
@@ -206,12 +206,12 @@ body{
 /*---------- Main----------*/
 
 .prd-block{
-	width: 720px;
+	width: 950px;
 	height:auto;
 }
 
 .prd-block h2{
-	width: 708px;
+	width: 870px;
 	height: 35px;
 	line-height: 35px;
 	font-family: Verdana, Geneva, sans-serif;
@@ -225,7 +225,7 @@ body{
 }
 	
 .pr-list{
-	width: 740px;
+	width: 1000px;
 	height: auto;
 	padding: 10px 0px;
 }	
@@ -233,12 +233,12 @@ body{
 .prd-item{
 	float: left;
 	width: 208px;
-	height: 250px;
+	height: 320px;
 	text-align: center;
 	border: 1px solid #CCC;
 	margin-right: 15px;
 	margin-bottom: 15px;
-	padding: 10px;
+	padding: 0px;
 	background-color: #e6e3e3;
 }
 

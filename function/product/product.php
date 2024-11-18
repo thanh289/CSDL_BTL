@@ -13,7 +13,7 @@
         $productLineId = $_GET['productLineId'];
 
         // Pagination go here
-        $rowPerPage = 3;
+        $rowPerPage = 4;
         if(isset($_GET['page'])){
             $page = $_GET['page'];
         }else{
@@ -64,7 +64,7 @@
     ?>
             <div class="prd-item">
                 <a href="index.php?page_layout=productDetail&productId=<?php echo $row['productId'] ?>">
-                    <img width="80" height="144" src="admin/image/<?php echo $row['productImage'] ?>" />
+                    <img width="208" height="200" src="admin/image/<?php echo $row['productImage'] ?>">
                 </a>
                 <h3>
                     <a href="index.php?page_layout=productDetail&productId=<?php echo $row['productId'] ?>">
@@ -78,7 +78,7 @@
             </div>
     <?php
             $i++;
-            if($i%3==0){
+            if($i%4==0){
                 echo '<div class="clear"></div>';
             }
         }
