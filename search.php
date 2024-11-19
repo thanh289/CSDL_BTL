@@ -1,8 +1,8 @@
 <link rel="stylesheet" type="text/css" href="css/search.css" />
 <div class="prd-block">
     <?php
-        if(isset($_POST['stext'])){
-            $stext = $_POST['stext'];
+        if(isset($_GET['stext'])){
+            $stext = $_GET['stext'];
         }else{
             $stext = '';
         }
@@ -28,26 +28,26 @@
         
         if($page>1){
             // Return to first page
-            $listPage .= '<a href="index.php?page_layout=search&stext='.$stext.'&page=1"> << </a>';
+            $listPage .= '<a href="index.php?page_layout=search&stext=' . urlencode($stext) . '&page=1"> << </a>';
             // Return to previous page
             $prev = $page-1;
-            $listPage .= '<a href="index.php?page_layout=search&stext='.$stext.'&page='.$prev.'"> < </a>';
+            $listPage .= '<a href="index.php?page_layout=search&stext=' . urlencode($stext) . '&page=' . $prev . '"> < </a>';
         }
 
         for($i=1;$i<=$totalPage;$i++){
             if($i==$page){
                 $listPage .=  '<span> '.$i.' </span>';
             }else{
-                $listPage .= '<a href="index.php?page_layout=search&stext='.$stext.'&page='.$i.'"> '.$i.' </a>';
+                $listPage .= '<a href="index.php?page_layout=search&stext=' . urlencode($stext) . '&page=' . $i . '"> ' . $i . ' </a>';
             }
         }
 
         if($page<$totalPage){
             // Go to next page
             $next = $page+1;
-            $listPage .= '<a href="index.php?page_layout=search&stext='.$stext.'&page='.$next.'"> > </a>';
+            $listPage .= '<a href="index.php?page_layout=search&stext=' . urlencode($stext) . '&page=' . $next . '"> > </a>';
             // Go to last page
-            $listPage .= '<a href="index.php?page_layout=search&stext='.$stext.'&page='.$totalPage.'"> >> </a>';
+            $listPage .= '<a href="index.php?page_layout=search&stext=' . urlencode($stext) . '&page=' . $totalPage . '"> >> </a>';
            
         }
 

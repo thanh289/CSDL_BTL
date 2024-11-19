@@ -19,7 +19,8 @@
             <li id="menu-home"><a href="index.php">trang chủ</a></li>
         </ul>
         <div id="search-bar">
-            <form method="post" name="sform" action="index.php?page_layout=search">
+            <form method="get" name="sform" action="index.php">
+                <input type="hidden" name="page_layout" value="search" />
                 <input type="submit" name="sbutton" value="" />
                 <input type="text" name="stext" placeholder="Tìm kiếm sản phẩm"/>
             </form>
