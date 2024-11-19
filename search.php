@@ -28,26 +28,26 @@
         
         if($page>1){
             // Return to first page
-            $listPage .= '<a href="index.php?page_layout=search&stext=' . urlencode($stext) . '&page=1"> << </a>';
+            $listPage .= '<a href="mainCustomer.php?page_layout=search&stext=' . urlencode($stext) . '&page=1"> << </a>';
             // Return to previous page
             $prev = $page-1;
-            $listPage .= '<a href="index.php?page_layout=search&stext=' . urlencode($stext) . '&page=' . $prev . '"> < </a>';
+            $listPage .= '<a href="mainCustomer.php?page_layout=search&stext=' . urlencode($stext) . '&page=' . $prev . '"> < </a>';
         }
 
         for($i=1;$i<=$totalPage;$i++){
             if($i==$page){
                 $listPage .=  '<span> '.$i.' </span>';
             }else{
-                $listPage .= '<a href="index.php?page_layout=search&stext=' . urlencode($stext) . '&page=' . $i . '"> ' . $i . ' </a>';
+                $listPage .= '<a href="mainCustomer.php?page_layout=search&stext=' . urlencode($stext) . '&page=' . $i . '"> ' . $i . ' </a>';
             }
         }
 
         if($page<$totalPage){
             // Go to next page
             $next = $page+1;
-            $listPage .= '<a href="index.php?page_layout=search&stext=' . urlencode($stext) . '&page=' . $next . '"> > </a>';
+            $listPage .= '<a href="mainCustomer.php?page_layout=search&stext=' . urlencode($stext) . '&page=' . $next . '"> > </a>';
             // Go to last page
-            $listPage .= '<a href="index.php?page_layout=search&stext=' . urlencode($stext) . '&page=' . $totalPage . '"> >> </a>';
+            $listPage .= '<a href="mainCustomer.php?page_layout=search&stext=' . urlencode($stext) . '&page=' . $totalPage . '"> >> </a>';
            
         }
 
@@ -60,11 +60,11 @@
         while($row = $result->fetch_assoc()){
     ?>
             <div class="prd-item">
-                <a href="index.php?page_layout=productDetail&productId=<?php echo $row['productId'] ?>">
+                <a href="mainCustomer.php?page_layout=productDetail&productId=<?php echo $row['productId'] ?>">
                     <img width="208" height="200" src="admin/image/<?php echo $row['productImage'] ?>" />
                 </a>
                 <h3>
-                    <a href="index.php?page_layout=productDetail&productId=<?php echo $row['productId'] ?>">
+                    <a href="mainCustomer.php?page_layout=productDetail&productId=<?php echo $row['productId'] ?>">
                         <?php echo $row['productName'] ?>
                     </a>
                 </h3>

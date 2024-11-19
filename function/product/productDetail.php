@@ -10,26 +10,34 @@
         $result = $conn->query($sql);
         $row = $result->fetch_assoc();
     ?>
-    	<div class="prd-img"><img width="50%" src="admin/image/<?php echo $row['productImage'] ?>" /></div>	
+    	<div class="prd-img">
+            <img src="admin/image/<?php echo $row['productImage'] ?>" />
+        </div>	
         <div class="prd-intro">
         	<h3><?php echo $row['productName'] ?></h3>
             <p>Giá sản phẩm: <span><?php echo $row['productPrice'] ?> VNĐ</span></p>
         	<table>
             	<tr>
                 	<td width="30%"><span>Bảo hành:</span></td>
-                    <td>• <?php echo $row['guarantee'] ?></td>
+                    <td><?php echo $row['guarantee'] ?></td>
                 </tr>
                 <tr>
                 	<td><span>Đi kèm:</span></td>
-                    <td>• <?php echo $row['accessory'] ?></td>
+                    <td><?php echo $row['accessory'] ?></td>
                 </tr>
                 <tr>
                 	<td><span>Khuyến Mại:</span></td>
-                    <td>• <?php echo $row['promotion'] ?></td>
+                    <td><?php echo $row['promotion'] ?></td>
                 </tr>
                 <tr>
                 	<td><span>Còn hàng:</span></td>
-                    <td>• <?php echo $row['inStock'] ?></td>
+                    <td>
+                        <?php 
+                            $stock = $row['inStock'] ;
+                            if($stock) echo "Còn hàng";
+                            else echo "Hết hàng";
+                        ?>
+                    </td>
                 </tr>
             </table>
             <p class="add-cart">

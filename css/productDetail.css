@@ -1,0 +1,161 @@
+.prd-block {
+    width: 80%;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Image and Introduction */
+.prd-only {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.prd-img {
+    flex: 1;
+    text-align: center;
+}
+
+.prd-img img {
+    width: 300px; 
+    height: 300px; 
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.prd-intro {
+    flex: 1.5;
+}
+
+.prd-intro h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #007f49;
+}
+
+.prd-intro p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.prd-intro span {
+    font-weight: bold;
+}
+
+.prd-intro table {
+    width: 100%;
+    margin-top: 10px;
+    border-spacing: 0 10px;
+}
+
+.prd-intro table td {
+    font-size: 14px;
+    padding: 5px 0;
+}
+
+.prd-intro table td span {
+    font-weight: bold;
+}
+
+.add-cart {
+    margin-top: 20px;
+}
+
+.add-cart a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007f49;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.add-cart a:hover {
+    background: #01bc6b;
+}
+
+/* Product Details */
+.prd-details {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: #f8f9fc;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Comment Section */
+.prd-comment {
+    margin-top: 30px;
+}
+
+.prd-comment h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #007f49;
+}
+
+.prd-comment form ul {
+    list-style: none;
+}
+
+.prd-comment form ul li {
+    margin-bottom: 15px;
+}
+
+.prd-comment form ul li input,
+.prd-comment form ul li textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.prd-comment form ul li input[type="submit"] {
+    background: #007f49;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.prd-comment form ul li input[type="submit"]:hover {
+    background: #01bc6b;
+}
+
+/* Comment List */
+.comment-list ul {
+    list-style: none;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background: #f8f9fc;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.comment-list .com-title {
+    font-weight: bold;
+    color: #007f49;
+    margin-bottom: 5px;
+}
+
+.comment-list .com-title span {
+    font-size: 12px;
+    color: #666;
+}
+
+.comment-list .com-details {
+    font-size: 14px;
+    color: #333;
+    margin-top: 5px;
+}
+
+/* Clearfix */
+.clear {
+    clear: both;
+}

@@ -64,7 +64,7 @@
     ?>
             <div class="prd-item">
                 <a href="mainCustomer.php?page_layout=productDetail&productId=<?php echo $row['productId'] ?>">
-                    <img width="208" height="200" src="admin/image/<?php echo $row['productImage'] ?>">
+                    <img src="admin/image/<?php echo $row['productImage'] ?>">
                 </a>
                 <h3>
                     <a href="mainCustomer.php?page_layout=productDetail&productId=<?php echo $row['productId'] ?>">

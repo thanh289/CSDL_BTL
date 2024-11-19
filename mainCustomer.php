@@ -20,9 +20,9 @@
         </ul>
         <div id="search-bar">
             <form method="get" name="sform" action="mainCustomer.php">
-                <input type="hidden" name="page_layout" value="search" />
-                <input type="submit" name="sbutton" value="" />
-                <input type="text" name="stext" placeholder="Tìm kiếm sản phẩm"/>
+                <input type="hidden" name="page_layout" value="search" >
+                <input type="submit" name="sbutton" value="" >
+                <input type="text" name="stext" placeholder="Tìm kiếm sản phẩm">
             </form>
         </div>
     </div>

@@ -201,8 +201,15 @@ body{
 	border: 1px solid #CCC;
 	margin-right: 15px;
 	margin-bottom: 15px;
+	border-radius: 10px;
 	padding: 0px;
 	background-color: #fff;
+}
+
+.prd-item img{
+	width: 208px;
+	height: 200px;
+	border-radius: 10px 10px 0 0;
 }
 
 .prd-item h3{
