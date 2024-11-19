@@ -3,20 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Role Selection</title>
+    <title>Select Role</title>
     <link rel="stylesheet" href="css/option.css">
 </head>
+
 <body>
     <div class="container">
-        <h1>Choose Your Role</h1>
-        <div class="button-group">
-            <a href="admin/mainAdmin.php">
-                <button class="admin">Admin</button>
-            </a>
-            <a href="mainCustomer.php">
-                <button class="customer">Customer</button>
-            </a>
+        <h1>Please select your role</h1>
+        <div class="roles">
+            <div class="role" onclick="selectRole(this, 'admin/mainAdmin.php')">
+                <img src="image/admin.png" alt="Admin">
+                <span>Admin</span>
+            </div>
+            <div class="role" onclick="selectRole(this, 'mainCustomer.php')">
+                <img src="image/customer.png" alt="Customer">
+                <span>Customer</span>
+            </div>
         </div>
+
+        <button class="continue-btn" id="continue" disabled onclick="redirect()">Continue</button>
     </div>
+
+    <script>
+        let selectedRole = null;
+
+        function selectRole(element, roleLink) {
+            document.querySelectorAll('.role').forEach(role => role.classList.remove('active'));
+            element.classList.add('active');
+            document.getElementById('continue').disabled = false;
+            selectedRole = roleLink;
+        }
+
+        function redirect() {
+            if (selectedRole) {
+                window.location.href = selectedRole;
+            }
+        }
+    </script>
 </body>
 </html>

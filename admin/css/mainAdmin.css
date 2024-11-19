@@ -5,13 +5,22 @@
 *{
 	margin: 0px;
 	padding: 0px;
+	
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 body{
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 12px;
 	color: #666;
-	background-color: rgb(232, 229, 229);
+	background-color: #f0f4fc;
 }
 
 	
@@ -25,7 +34,7 @@ body{
 	width: 100%;
 	height: 30px;
 	background-color: #007f49;
-	border-top: 3px solid #ffaf34;
+	border-top: 5px solid #28a801;
 	border-bottom: 2px solid #CCC;
 }	
 	
@@ -56,8 +65,8 @@ body{
 
 /*---------------- Wrapper -------------------*/	
 #wrapper{
+	flex: 1;
 	width: 1000px;
-	height: auto;
 	margin: 30px auto;
 }	
 
@@ -80,7 +89,7 @@ body{
 	width: 960px;
 	height: auto;
 	padding: 20px;
-	background: #d3d3d3;
+	background: #e8e8e8;
 }
 	
 #body h2{
@@ -108,12 +117,13 @@ body{
 /*------------------ Footer-----------------*/
 footer {
 	width: 100%;
-	height: auto;
-	background: #007f49;
-	border-bottom: 15px solid #ffaf34;
-	margin-top: 35px;
-	text-align: center;
-	position: bottom left;
+    background: #007f49;
+    border-bottom: 15px solid #28a801;
+    text-align: center;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #FFF;
 	
 }
 	
@@ -129,101 +139,9 @@ footer h4{
 }		
 
 footer p{
-	height: auto;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 12px;
 	font-weight: bold;
 	color: #FFF;
 	padding: 1px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	

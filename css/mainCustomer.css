@@ -7,7 +7,7 @@
 body{
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 12px;
-	color: #666;
+	background-color: #f0f4fc;
 }	
 
 /*---------- Header----------*/
@@ -15,7 +15,7 @@ body{
 	width: 100%;
 	height: auto;
 	background-color: #007f49;
-	border-top: 3px solid #ffaf34;
+	border-top: 5px solid #28a801;
 	border-bottom: 2px solid #CCC;
 }
 	
@@ -44,7 +44,7 @@ body{
 	
 #navbar ul li a{
 	text-decoration: none;
-	color: #ffffff;
+	color: #fff;
 }
 	
 
@@ -54,7 +54,6 @@ body{
 	height: 40;
 	margin-top: 8px;
 	float: right;
-	/* display: inli; */
 }
 
 #search-bar input{
@@ -78,48 +77,13 @@ body{
 	padding-left: 10px;
 }
 
-#cart{
-	position: absolute;
-	width: 40px;
-	height: 40px;
-	background: url(../image/shopping-cart.png) top  left no-repeat;
-	top: -3px;
-	left: 767px;
-	padding-top: 40px;
-	}
-
-#cart p{
-	width: 213px;
-	height: auto;
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 12px;
-	text-align: center;
-	color: #FFF;
-	}
-	
-#cart p span{
-	font-weight: bold;
-	color: #FF0;
-	}	
-
-#cart p a{
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 12px;
-	text-decoration: none;
-	color: #FF0;
-	font-weight: bold;
-	}
-
-	
-
-
 /*---------- Wrapper----------*/	
 #wrapper{
 	width: 1500px;
 	height: auto;
 	margin: 30px 20px;
 	margin-bottom: 0px;
-	}
+}
 
 
 /*---------- Body----------*/
@@ -127,9 +91,9 @@ body{
 	overflow: hidden;
 	width: 1400px;
 	height: auto;
-	background: #FFF;
+	background: #f0f4fc;
 	padding: 20px 0px;
-	}
+}
 
 /*---------- Left Sidebar----------*/
 #l-col{
@@ -138,10 +102,12 @@ body{
 	height: auto;
 	padding-left: 80px;
 }
+
 .l-sidebar{
 	width: 218px;
 	height: auto;
 	border: 1px solid #CCC;
+	background: #fff;
 	margin-bottom: 20px;
 }
 
@@ -236,7 +202,7 @@ body{
 	margin-right: 15px;
 	margin-bottom: 15px;
 	padding: 0px;
-	background-color: #e6e3e3;
+	background-color: #fff;
 }
 
 .prd-item h3{
@@ -267,7 +233,7 @@ body{
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 12px;
 	font-weight: bold;
-	color: #ffd608;
+	color: #000000;
 }
 	
 .prd-item p.price span{
@@ -285,7 +251,7 @@ footer {
 	width: 100%;
 	height: auto;
 	background: #007f49;
-	border-bottom: 15px solid #ffaf34;
+	border-bottom: 15px solid #28a801;
 	margin-top: 35px;
 	text-align: center;
 	position: bottom left;
