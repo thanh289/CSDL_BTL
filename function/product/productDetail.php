@@ -1,5 +1,5 @@
 <!-- All product detail when you click the product -->
-<link rel="stylesheet" type="text/css" href="css/chitietsp.css" />
+<link rel="stylesheet" href="css/productDetail.css" />
 <div class="prd-block">
 
     <!-- Detail of product go here -->
@@ -100,7 +100,6 @@
     ?>
     </div>
     
-    <!-- Pagination go here -->
-    <!-- <div class="com-pagination"><span>1</span> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a></div> -->
+   <!-- No pagination yet  -->
     
 </div>               

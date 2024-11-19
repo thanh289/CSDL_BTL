@@ -11,17 +11,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/mainAdmin.css" />
 </head>
 
 <body>
 
     <div id="navbar">
         <ul>
-            <li id="admin-home"><a href="index.php">Trang chủ</a></li>
-            <li><a href="index.php?page_layout=customer ">Khách hàng</a></li>
-            <li><a href="index.php?page_layout=productLine">Loại sản phẩm</a></li>
-            <li><a href="index.php?page_layout=product">Sản phẩm</a></li>
+            <li id="admin-home"><a href="mainAdmin.php">Trang chủ</a></li>
+            <li><a href="mainAdmin.php?page_layout=customer ">Khách hàng</a></li>
+            <li><a href="mainAdmin.php?page_layout=productLine">Loại sản phẩm</a></li>
+            <li><a href="mainAdmin.php?page_layout=product">Sản phẩm</a></li>
         </ul>
     </div>
 

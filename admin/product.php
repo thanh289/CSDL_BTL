@@ -18,7 +18,7 @@
 <div id="main">
 
 	<p id="add-prd">
-        <a href="index.php?page_layout=addProduct">
+        <a href="mainAdmin.php?page_layout=addProduct">
             <span>Thêm sản phẩm</span>
         </a>
     </p>
@@ -42,7 +42,7 @@
                     <span><?php echo $row['productId'];?></span>
                 </td>
                 <td class="l5">
-                    <a href="index.php?page_layout=fixProduct&productId=<?php echo $row['productId'];?>">
+                    <a href="mainAdmin.php?page_layout=fixProduct&productId=<?php echo $row['productId'];?>">
                         <?php echo $row['productName'];?>
                     </a>
                 </td>
@@ -58,7 +58,7 @@
                     </span>
                 </td>
                 <td>
-                    <a href="index.php?page_layout=fixProduct&productId=<?php echo $row['productId'];?>">
+                    <a href="mainAdmin.php?page_layout=fixProduct&productId=<?php echo $row['productId'];?>">
                         <span>Fix</span>
                     </a>
                 </td>

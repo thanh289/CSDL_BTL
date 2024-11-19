@@ -9,17 +9,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User</title>
-    <link rel="stylesheet" type="text/css" href="css/home.css"/>
+    <link rel="stylesheet" href="css/mainCustomer.css"/>
 </head>
 
 <body>
     <!-- Nav Bar -->
     <div id="navbar">
         <ul>
-            <li id="menu-home"><a href="index.php">trang chủ</a></li>
+            <li id="menu-home"><a href="mainCustomer.php">trang chủ</a></li>
         </ul>
         <div id="search-bar">
-            <form method="get" name="sform" action="index.php">
+            <form method="get" name="sform" action="mainCustomer.php">
                 <input type="hidden" name="page_layout" value="search" />
                 <input type="submit" name="sbutton" value="" />
                 <input type="text" name="stext" placeholder="Tìm kiếm sản phẩm"/>

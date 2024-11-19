@@ -8,7 +8,7 @@
             while($row = $result->fetch_assoc()){
     ?>
                 <li>
-                    <a href="index.php?page_layout=product&productLineId=<?php echo $row['productLineId'] ?>&productLineName=<?php echo $row['productLineName'] ?>">
+                    <a href="mainCustomer.php?page_layout=product&productLineId=<?php echo $row['productLineId'] ?>&productLineName=<?php echo $row['productLineName'] ?>">
                         <?php echo $row['productLineName'] ?>
                     </a>
                 </li>

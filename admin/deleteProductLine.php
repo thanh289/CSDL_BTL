@@ -9,5 +9,5 @@
 	} catch (mysqli_sql_exception) {
 		echo "Could not remove product!";
 	}
-	header('location:index.php?page_layout=productLine');
+	header('location:mainAdmin.php?page_layout=productLine');
 ?>

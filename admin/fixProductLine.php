@@ -61,7 +61,7 @@
                 echo "Error updating record: " . $conn->error;
             }
             
-            header('location:index.php?page_layout=productLine');            
+            header('location:mainAdmin.php?page_layout=productLine');            
         }
     }
     ob_end_flush();

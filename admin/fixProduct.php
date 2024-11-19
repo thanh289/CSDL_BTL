@@ -209,7 +209,7 @@
                 echo "Error updating record: " . $conn->error;
             }
             
-            header('location:index.php?page_layout=product');            
+            header('location:mainAdmin.php?page_layout=product');            
         }
     }
     ob_end_flush();

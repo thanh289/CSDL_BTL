@@ -8,11 +8,11 @@
             while($row = $result->fetch_assoc()){
         ?>
                 <div class="prd-item">
-                    <a href="index.php?page_layout=productDetail&productId=<?php echo $row['productId'] ?>">
+                    <a href="mainCustomer.php?page_layout=productDetail&productId=<?php echo $row['productId'] ?>">
                         <img width="208" height="200" src="admin/image/<?php echo $row['productImage'] ?>" />
                     </a>
                     <h3>
-                        <a href="index.php?page_layout=productDetail&productId=<?php echo $row['productId'] ?>">
+                        <a href="mainCustomer.php?page_layout=productDetail&productId=<?php echo $row['productId'] ?>">
                             <?php echo $row['productName'] ?>
                         </a>
                     </h3>
