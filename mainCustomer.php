@@ -17,6 +17,24 @@
     <div id="navbar">
         <ul>
             <li id="menu-home"><a href="mainCustomer.php">trang chủ</a></li>
+            <li id="menu-category" class="dropdown">
+            <a href="javascript:void(0)">Loại Hàng</a>
+            <div class="dropdown-content">
+                <?php
+                    $sql = "SELECT * FROM productLine";
+                    $result = $conn->query($sql);
+                    if($result->num_rows > 0){
+                        while($row = $result->fetch_assoc()){
+                ?>
+                        <a href="mainCustomer.php?page_layout=product&productLineId=<?php echo $row['productLineId'] ?>&productLineName=<?php echo $row['productLineName'] ?>">
+                            <?php echo $row['productLineName'] ?>
+                        </a>
+                <?php
+                        }
+                    }
+                ?>
+            </div>
+        </li>
         </ul>
         <div id="search-bar">
             <form method="get" name="sform" action="mainCustomer.php">
@@ -31,11 +49,6 @@
     <div id="wrapper">
         <!-- Body -->
         <div id="body">
-            <!-- Left Column -->
-            <div id="l-col">
-                <?php include_once('function/product/productLine.php');?>
-            </div>
-            
             <!-- Right Column -->
             <div id="r-col">
                 <div id="main">

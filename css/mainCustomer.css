@@ -10,34 +10,36 @@ body{
 	background-color: #f0f4fc;
 }	
 
-/*---------- Header----------*/
+/*---------- Navbar----------*/
 #navbar{
-	width: 100%;
-	height: auto;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
 	background-color: #007f49;
 	border-top: 5px solid #28a801;
 	border-bottom: 2px solid #CCC;
+	align-items: center; /* Căn giữa nội dung theo chiều dọc */
+    height: 40px; /* Đặt chiều cao cho toàn bộ navbar (điều chỉnh theo ý bạn) */
 }
 	
 #navbar ul{
-	height: 45px;
-	display: inline-block;
+	list-style: none;
+    display: flex;
+    margin: 0;
+    
 }
 	
 #navbar ul li{
-	float: left;
-	width: auto;
-	height: 45px;
-	line-height: 45px;
+	position: relative;
+    margin-right: 20px;
+	margin-left: 20px;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 15px;
 	font-weight: bold;
 	text-transform: capitalize;
-	padding: 0px 12px;
 }
 	
 #navbar ul li:hover a{
-	color: #28a801;
 	font-weight: bold;
 	cursor: pointer;
 }				
@@ -45,10 +47,41 @@ body{
 #navbar ul li a{
 	text-decoration: none;
 	color: #fff;
+	display: block;
+    text-transform: capitalize;
 }
-	
+		
+/*---------- Dropdown----------*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+	background-color: #007f49;
+}
+
+.dropdown-content a {
+    color: #007f49;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background-color: #28a801;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
 
+/*---------- Search Bar----------*/
 #search-bar	{
 	width: 300px;
 	height: 40;
@@ -93,74 +126,13 @@ body{
 	height: auto;
 	background: #f0f4fc;
 	padding: 20px 0px;
+	margin-left: 300px;
 }
 
-/*---------- Left Sidebar----------*/
-#l-col{
-	float: left;
-	width: 220px;
-	height: auto;
-	padding-left: 80px;
-}
-
-.l-sidebar{
-	width: 218px;
-	height: auto;
-	border: 1px solid #CCC;
-	background: #fff;
-	margin-bottom: 20px;
-}
-
-.l-sidebar h2{
-	width: 206px;
-	height: 35px;
-	line-height: 35px;
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 15px;
-	font-weight: bold;
-	color: #FFF;
-	text-transform: capitalize;
-	background:  #007f49;
-	padding-left: 12px;
-}
-
-.l-sidebar ul{
-	width:218px;
-	height:auto;
-}
-
-
-/*---------- Main Menu----------*/
-.l-sidebar ul#main-menu li{
-	list-style: none;
-	width: 194px;
-	height: 35px;
-	line-height: 35px;
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 15px;
-	font-weight:bold;
-	padding-left: 12px;
-
-	margin-right: 12px;
-}
-	
-.l-sidebar ul#main-menu li:hover{
-	cursor: pointer;
-}	
-	
-.l-sidebar ul#main-menu li a{
-	text-decoration:none;
-	color: #3a3535;
-}	
-
-.l-sidebar ul#main-menu li a:hover{
-	color: #28a801;
-}
-	
 
 /*---------- Right Sidebar----------*/
 #r-col{
-	float: right;
+	float: left;
 	width: 950px;
 	height: auto;
 	padding-left: 20px;
