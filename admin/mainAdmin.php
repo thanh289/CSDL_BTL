@@ -40,10 +40,12 @@
                     case 'addProductLine': include_once('productLine/addProductLine.php'); break;
                     case 'fixProductLine': include_once('productLine/fixProductLine.php'); break;
                     case 'productLine': include_once('productLine/productLine.php'); break;
+                    case 'searchProductLine': include_once('productLine/searchProductLine.php'); break;  
                     case 'addProduct': include_once('product/addProduct.php'); break;
                     case 'fixProduct': include_once('product/fixProduct.php'); break;
                     case 'product': include_once('product/product.php'); break;
-                    case 'searchProduct': include_once('product/searchProduct.php'); break; 
+                    case 'searchProduct': include_once('product/searchProduct.php'); break;
+                    
                 }
             }else{
                 include_once('introduction.php');

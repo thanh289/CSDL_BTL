@@ -16,6 +16,13 @@
 <h2>Quản lí phân loại sản phẩm</h2>
 
 <div id="main">
+    
+    <div id="search-bar">
+            <form method="get" name="sform" action="mainAdmin.php">
+                <input type="hidden" name="page_layout" value="searchProductLine" >
+                <input type="text" name="stext" placeholder="Tìm kiếm sản phẩm">
+            </form>
+    </div>
 
 	<p id="add-prdline">
         <a href="mainAdmin.php?page_layout=addProductLine">
