@@ -17,6 +17,13 @@
 
 <div id="main">
 
+    <div id="search-bar">
+            <form method="get" name="sform" action="mainAdmin.php">
+                <input type="hidden" name="page_layout" value="searchProduct" >
+                <input type="text" name="stext" placeholder="Tìm kiếm sản phẩm">
+            </form>
+    </div>
+
 	<p id="add-prd">
         <a href="mainAdmin.php?page_layout=addProduct">
             <span>Thêm sản phẩm</span>

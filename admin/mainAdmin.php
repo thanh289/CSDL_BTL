@@ -37,12 +37,13 @@
             <?php
             if(isset($_GET['page_layout'])){
                 switch ($_GET['page_layout']){
-                    case 'addProductLine': include_once('addProductLine.php'); break;
-                    case 'fixProductLine': include_once('fixProductLine.php'); break;
-                    case 'productLine': include_once('productLine.php'); break;
-                    case 'addProduct': include_once('addProduct.php'); break;
-                    case 'fixProduct': include_once('fixProduct.php'); break;
-                    case 'product': include_once('product.php'); break;
+                    case 'addProductLine': include_once('productLine/addProductLine.php'); break;
+                    case 'fixProductLine': include_once('productLine/fixProductLine.php'); break;
+                    case 'productLine': include_once('productLine/productLine.php'); break;
+                    case 'addProduct': include_once('product/addProduct.php'); break;
+                    case 'fixProduct': include_once('product/fixProduct.php'); break;
+                    case 'product': include_once('product/product.php'); break;
+                    case 'searchProduct': include_once('product/searchProduct.php'); break; 
                 }
             }else{
                 include_once('introduction.php');
