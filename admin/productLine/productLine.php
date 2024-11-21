@@ -56,7 +56,7 @@
                     </a>
                 </td>
                 <td>
-                    <a href="deleteProductLine.php?productLineId=<?php echo $row['productLineId'];?>">
+                    <a href="productLine/deleteProductLine.php?productLineId=<?php echo $row['productLineId'];?>">
                         <span>Delete</span>
                     </a>
                 </td>

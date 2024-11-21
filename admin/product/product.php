@@ -70,7 +70,7 @@
                     </a>
                 </td>
                 <td>
-                    <a href="deleteProduct.php?productId=<?php echo $row['productId'];?>">
+                    <a href="product/deleteProduct.php?productId=<?php echo $row['productId'];?>">
                         <span>Delete</span>
                     </a>
                 </td>
