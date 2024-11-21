@@ -188,14 +188,14 @@
         $special = $_POST['special'];
 
         //  Check and Update MySQL
-        if(isset($productName) && isset($productPrice) && isset($guarantee) && isset($accessory) && isset($promotion) && isset($inStock) && isset($detail)){
+        if(isset($productName) && is_numeric($productPrice) && isset($guarantee) && isset($accessory) && isset($promotion) && isset($inStock) && isset($detail)){
             if($_FILES['productImage1']['name'] != ""){
                 move_uploaded_file($tmp, 'image/'.$productImage);
             }  
             $sqlUpdate = "UPDATE product SET productLineId = $productLineId,
                                             productName = '$productName',
                                             productImage ='$productImage',
-                                            productPrice = '$productPrice',
+                                            productPrice = $productPrice,
                                             guarantee = '$guarantee',
                                             accessory = '$accessory',
                                             promotion = '$promotion',
