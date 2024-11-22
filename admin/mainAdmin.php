@@ -22,6 +22,7 @@
             <li><a href="mainAdmin.php?page_layout=productLine">Loại sản phẩm</a></li>
             <li><a href="mainAdmin.php?page_layout=product">Sản phẩm</a></li>
             <li><a href="mainAdmin.php?page_layout=order">Đơn hàng</a></li>
+            <li><a href="mainAdmin.php?page_layout=payment">Thanh toán</a></li>
             
         </ul>
     </div>
@@ -45,6 +46,8 @@
                     case 'searchOrder': include_once('order/searchOrder.php'); break;
                     case 'customer': include_once('customer/customer.php'); break;
                     case 'searchCustomer': include_once('customer/searchCustomer.php'); break;
+                    case 'payment': include_once('payment/payment.php'); break;
+                    case 'searchPayment': include_once('payment/searchPayment.php'); break;
                 }
             } else {
                 include_once('introduction.php');
