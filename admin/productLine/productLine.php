@@ -1,5 +1,15 @@
 <?php
-    include_once('connection.php');
+    	$dbHost = 'localhost';
+        $dbUsername = 'TFT';
+        $dbPassword = 'Fongngu123';
+        $dbName = 'web_csdl';
+        $conn = mysqli_connect($dbHost,
+                            $dbUsername,
+                            $dbPassword,
+                            $dbName);
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
     if(isset($_GET['page'])){
         $page = $_GET['page'];
     }else{
@@ -25,7 +35,7 @@
     </div>
 
 	<p id="add-prdline">
-        <a href="mainAdmin.php?page_layout=addProductLine">
+        <a href="/admin/mainAdmin.php?page_layout=addProductLine">
             <span>Thêm loại hàng</span>
         </a>
     </p>
@@ -46,12 +56,12 @@
                     <span><?php echo $row['productLineId'];?></span>
                 </td>
                 <td id="name">
-                    <a href="mainAdmin.php?page_layout=fixProductLine&productLineId=<?php echo $row['productLineId'];?>">
+                    <a href="/admin/mainAdmin.php?page_layout=fixProductLine&productLineId=<?php echo $row['productLineId'];?>">
                         <?php echo $row['productLineName'];?>
                     </a>
                 </td>
                 <td>
-                    <a href="mainAdmin.php?page_layout=fixProductLine&productLineId=<?php echo $row['productLineId'];?>">
+                    <a href="/admin/mainAdmin.php?page_layout=fixProductLine&productLineId=<?php echo $row['productLineId'];?>">
                         <span>Fix</span>
                     </a>
                 </td>

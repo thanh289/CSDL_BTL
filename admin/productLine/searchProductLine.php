@@ -1,5 +1,15 @@
 <?php
-    include_once('connection.php');
+        	$dbHost = 'localhost';
+            $dbUsername = 'TFT';
+            $dbPassword = 'Fongngu123';
+            $dbName = 'web_csdl';
+            $conn = mysqli_connect($dbHost,
+                                $dbUsername,
+                                $dbPassword,
+                                $dbName);
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
     if(isset($_GET['stext'])){
         $stext = $_GET['stext'];
     }else{
@@ -28,12 +38,12 @@
     <div id="search-bar">
         <form method="get" name="sform" action="mainAdmin.php">
             <input type="hidden" name="page_layout" value="searchProductLine">
-            <input type="text" name="stext" placeholder="Tìm kiếm phân loại">
+            <input type="text" name="stext" placeholder="Tìm kiếm sản phẩm">
         </form>
     </div>
 
     <p id="add-prd">
-        <a href="mainAdmin.php?page_layout=addProductLine">
+        <a href="/admin/mainAdmin.php?page_layout=addProductLine">
             <span>Thêm loại hàng</span>
         </a>
     </p>
@@ -54,7 +64,7 @@
                 <span><?php echo $row['productLineId']; ?></span>
             </td>
             <td class="l5">
-                <a href="mainAdmin.php?page_layout=fixProductLine&productLineId=<?php echo $row['productLineId']; ?>">
+                <a href="/admin/mainAdmin.php?page_layout=fixProductLine&productLineId=<?php echo $row['productLineId']; ?>">
                     <?php echo $row['productLineName']; ?>
                 </a>
             </td>
