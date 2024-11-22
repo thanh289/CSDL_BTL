@@ -1,45 +1,46 @@
 <?php
-$dbHost = 'localhost';
-$dbUsername = 'TFT';
-$dbPassword = 'Fongngu123';
-$dbName = 'web_csdl';
+    $dbHost = 'localhost';
+    $dbUsername = 'TFT';
+    $dbPassword = 'Fongngu123';
+    $dbName = 'web_csdl';
 
-$conn = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName);
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+    $conn = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName);
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
 
-$searchText = isset($_GET['stext']) ? $_GET['stext'] : '';
-$page = isset($_GET['page']) ? $_GET['page'] : 1;
-$rowsPerPage = 10;
-$perRow = ($page - 1) * $rowsPerPage;
+    $searchText = isset($_GET['stext']) ? $_GET['stext'] : '';
+    $page = isset($_GET['page']) ? $_GET['page'] : 1;
+    $rowsPerPage = 10;
+    $perRow = ($page - 1) * $rowsPerPage;
 
-$sql = "SELECT o.orderNumber, o.customerNumber, o.orderDate, 
-               od.productId, od.quantityOrdered
-        FROM orders AS o
-        JOIN orderDetail AS od ON o.orderNumber = od.orderNumber
-        WHERE o.customerNumber LIKE '%$searchText%'
-           OR od.productId LIKE '%$searchText%'
-           OR o.orderDate LIKE '%$searchText%'
-        LIMIT $perRow, $rowsPerPage";
+    $sql = "SELECT o.orderNumber, o.customerNumber, o.orderDate, 
+                od.productId, od.quantityOrdered
+            FROM orders AS o
+            JOIN orderDetail AS od ON o.orderNumber = od.orderNumber
+            WHERE o.customerNumber LIKE '%$searchText%'
+            OR od.productId LIKE '%$searchText%'
+            OR o.orderDate LIKE '%$searchText%'
+            LIMIT $perRow, $rowsPerPage";
 
-$result1 = $conn->query($sql);
+    $result1 = $conn->query($sql);
 
-$sqlTotal = "SELECT COUNT(*) AS totalRows 
-             FROM orders AS o
-             JOIN orderDetail AS od ON o.orderNumber = od.orderNumber
-             WHERE o.customerNumber LIKE '%$searchText%'
-                OR od.productId LIKE '%$searchText%'
-                OR o.orderDate LIKE '%$searchText%'";
-$resultTotal = $conn->query($sqlTotal);
-$totalRows = $resultTotal->fetch_assoc()['totalRows'];
-$totalPage = ceil($totalRows / $rowsPerPage);
+    $sqlTotal = "SELECT COUNT(*) AS totalRows 
+                FROM orders AS o
+                JOIN orderDetail AS od ON o.orderNumber = od.orderNumber
+                WHERE o.customerNumber LIKE '%$searchText%'
+                    OR od.productId LIKE '%$searchText%'
+                    OR o.orderDate LIKE '%$searchText%'";
+    $resultTotal = $conn->query($sqlTotal);
+    $totalRows = $resultTotal->fetch_assoc()['totalRows'];
+    $totalPage = ceil($totalRows / $rowsPerPage);
 ?>
+
 <link rel="stylesheet" type="text/css" href="css/order.css" />
 
+<h2>Tìm kiếm đơn hàng</h2>
 
 <div id="main">
-    <h2>Tìm kiếm đơn hàng</h2>
     
     <div id="search-bar">
         <form method="get" name="sform" action="mainAdmin.php">
@@ -50,7 +51,7 @@ $totalPage = ceil($totalRows / $rowsPerPage);
 
     <table id="orders" cellpadding="0" cellspacing="0" width="100%">
         <tr id="order-bar">
-            <td width="20%">Số đơn hàng</td>
+            <td width="20%">Mã đơn hàng</td>
             <td width="20%">Mã khách hàng</td>
             <td width="20%">Ngày đặt hàng</td>
             <td width="20%">Mã sản phẩm</td>

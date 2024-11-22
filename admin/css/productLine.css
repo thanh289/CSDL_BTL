@@ -1,4 +1,4 @@
-/* Add Product */
+/* Add Product Line */
 #main p#add-prdline{
 	width: 938px;
 	height: auto;
@@ -42,7 +42,6 @@
 /* Table */
 #main table#prdline{
 	width: 938px;
-	height: 100px;
 	border-top: 1px solid #CCC;
 	border-right: 1px solid #CCC;
 }

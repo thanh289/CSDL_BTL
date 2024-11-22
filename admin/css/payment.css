@@ -8,6 +8,7 @@
     margin-bottom: 20px;
 }
 
+/* Search bar */
 #search-bar {
     width: 300px;
     height: 40px;
@@ -42,6 +43,7 @@
     text-align: center;
     font-family: Verdana, Geneva, sans-serif;
     font-size: 12px;
+    height: 40px;
 }
 
 #payment-bar {

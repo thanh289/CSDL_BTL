@@ -1,6 +1,18 @@
 <?php
     ob_start();
-    include_once('connection.php');
+    $dbHost = 'localhost';
+	$dbUsername = 'TFT';
+	$dbPassword = 'Fongngu123';
+	$dbName = 'web_csdl';
+	$conn = mysqli_connect($dbHost,
+						$dbUsername,
+						$dbPassword,
+						$dbName);
+	if ($conn->connect_error) {
+		die("Connection failed: " . $conn->connect_error);
+	}
+
+
     $productLineId = $_GET['productLineId'];
     $sql = "SELECT * FROM productLine WHERE productLineId = $productLineId";
     $result = $conn->query($sql);
@@ -9,6 +21,7 @@
 ?>
 
     <link rel="stylesheet" type="text/css" href="css/fixProductLine.css"/>
+    
     <h2>Sửa loại hàng</h2>
 
     <div id="main">
