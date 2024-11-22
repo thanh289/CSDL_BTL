@@ -32,7 +32,7 @@
     <div id="search-bar">
             <form method="get" name="sform" action="mainAdmin.php">
                 <input type="hidden" name="page_layout" value="searchOrder" >
-                <input type="text" name="stext" placeholder="Tìm kiếm sản phẩm">
+                <input type="text" name="stext" placeholder="Tìm kiếm đơn hàng">
             </form>
     </div>
     <table id="orders" cellpadding="0" cellspacing="0" width="100%">

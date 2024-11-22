@@ -36,7 +36,7 @@
 
 <link rel="stylesheet" type="text/css" href="css/product.css" />
 
-<h2>Quản lí sản phẩm</h2>
+<h2>Tìm kiếm sản phẩm</h2>
 
 <div id="main">
 
@@ -100,6 +100,8 @@
         </tr>
         <?php
                 }
+            } else {
+                echo '<tr><td colspan="7">Không tìm thấy kết quả nào!</td></tr>';
             }
         ?>
     </table>

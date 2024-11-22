@@ -51,11 +51,11 @@
 
     <table id="orders" cellpadding="0" cellspacing="0" width="100%">
         <tr id="order-bar">
-            <td width="20%">Mã đơn hàng</td>
-            <td width="20%">Mã khách hàng</td>
+            <td width="10%">Mã đơn hàng</td>
+            <td width="15%">Mã khách hàng</td>
             <td width="20%">Ngày đặt hàng</td>
-            <td width="20%">Mã sản phẩm</td>
-            <td width="20%">Số lượng</td>
+            <td width="10%">Mã sản phẩm</td>
+            <td width="15%">Số lượng</td>
         </tr>
         <?php
             if ($result1->num_rows > 0) {

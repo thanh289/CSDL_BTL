@@ -36,9 +36,9 @@
 
 <link rel="stylesheet" type="text/css" href="css/customer.css" />
 
-<div id="main">
+<h2>Tìm kiếm khách hàng</h2>
 
-    <h2>Tìm kiếm khách hàng</h2>
+<div id="main">
 
     <div id="search-bar">
         <form method="get" name="sform" action="mainAdmin.php">

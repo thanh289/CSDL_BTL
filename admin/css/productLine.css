@@ -49,6 +49,9 @@
 #main table#prdline tr td{
 	border-left: 1px solid #CCC;
 	border-bottom: 1px solid #CCC;
+	text-align: center;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
     height: 40px;
 }
 

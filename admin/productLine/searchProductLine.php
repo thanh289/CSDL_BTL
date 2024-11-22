@@ -83,6 +83,8 @@
         </tr>
         <?php
                 }
+            } else {
+                echo '<tr><td colspan="4">Không tìm thấy kết quả nào!</td></tr>';
             }
         ?>
     </table>
