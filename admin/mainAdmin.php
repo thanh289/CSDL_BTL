@@ -43,6 +43,8 @@
                     case 'searchProduct': include_once('product/searchProduct.php'); break;
                     case 'order': include_once('order/order.php'); break; 
                     case 'searchOrder': include_once('order/searchOrder.php'); break;
+                    case 'customer': include_once('customer/customer.php'); break;
+                    case 'searchCustomer': include_once('customer/searchCustomer.php'); break;
                 }
             } else {
                 include_once('introduction.php');

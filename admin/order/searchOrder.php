@@ -45,7 +45,6 @@ $totalPage = ceil($totalRows / $rowsPerPage);
         <form method="get" name="sform" action="mainAdmin.php">
             <input type="hidden" name="page_layout" value="searchOrder">
             <input type="text" name="stext" value="<?php echo $searchText; ?>" placeholder="Nhập từ khóa tìm kiếm">
-            <button type="submit">Tìm kiếm</button>
         </form>
     </div>
 

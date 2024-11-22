@@ -1,5 +1,15 @@
 <?php
-    include_once('connection.php');
+    	$dbHost = 'localhost';
+        $dbUsername = 'TFT';
+        $dbPassword = 'Fongngu123';
+        $dbName = 'web_csdl';
+        $conn = mysqli_connect($dbHost,
+                            $dbUsername,
+                            $dbPassword,
+                            $dbName);
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
     if(isset($_GET['page'])){
         $page = $_GET['page'];
     }else{
@@ -25,7 +35,7 @@
     </div>
 
 	<p id="add-prd">
-        <a href="mainAdmin.php?page_layout=addProduct">
+        <a href="/admin/mainAdmin.php?page_layout=addProduct">
             <span>Thêm sản phẩm</span>
         </a>
     </p>
@@ -49,7 +59,7 @@
                     <span><?php echo $row['productId'];?></span>
                 </td>
                 <td class="l5">
-                    <a href="mainAdmin.php?page_layout=fixProduct&productId=<?php echo $row['productId'];?>">
+                    <a href="/admin/mainAdmin.php?page_layout=fixProduct&productId=<?php echo $row['productId'];?>">
                         <?php echo $row['productName'];?>
                     </a>
                 </td>
@@ -65,7 +75,7 @@
                     </span>
                 </td>
                 <td>
-                    <a href="mainAdmin.php?page_layout=fixProduct&productId=<?php echo $row['productId'];?>">
+                    <a href="/admin/mainAdmin.php?page_layout=fixProduct&productId=<?php echo $row['productId'];?>">
                         <span>Fix</span>
                     </a>
                 </td>
