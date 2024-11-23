@@ -103,23 +103,34 @@
             $sqlOrder = "INSERT INTO orders (orderDate, customerNumber) 
                          VALUES (NOW(), $customerNumber)";
 
-            if ($conn->query($sqlOrder) == TRUE) {
+            if ($conn->query($sqlOrder) === TRUE) {
                 $orderNumber = $conn->insert_id;
 
+                // Thêm chi tiết đơn hàng
                 $sqlOrderDetail = "INSERT INTO orderdetail (orderNumber, productId, quantityOrdered) 
-                                   VALUES ($orderNumber, $productId, $quantity)";
+                                VALUES ($orderNumber, $productId, $quantity)";
                 if ($conn->query($sqlOrderDetail) === TRUE) {
-                    echo "<div class='order-success'>
-                            <h3>Đặt hàng thành công!</h3>
-                            <p>Cảm ơn bạn, $customerName. Thông tin đơn hàng:</p>
-                            <ul>
-                                <li><strong>Tên sản phẩm:</strong> {$row['productName']}</li>
-                                <li><strong>Giá:</strong> {$row['productPrice']} VNĐ</li>
-                                <li><strong>Số lượng:</strong> $quantity</li>
-                                <li><strong>Tổng tiền:</strong> $totalPrice VNĐ</li>
-                                <li><strong>Địa chỉ nhận hàng:</strong> $address</li>
-                            </ul>
-                          </div>";
+                    // * Thêm vào bảng payments *
+                    $paymentDate = date('Y-m-d'); // Ngày thanh toán hiện tại
+                    $totalAmount = $row['productPrice'] * $quantity;
+
+                    $sqlPayment = "INSERT INTO payments (customerNumber, paymentDate, amount, orderNumber) 
+                                VALUES ($customerNumber, '$paymentDate', $totalAmount, $orderNumber)";
+                    if ($conn->query($sqlPayment) === TRUE) {
+                        echo "<div class='order-success'>
+                                <h3>Đặt hàng và thanh toán thành công!</h3>
+                                <p>Cảm ơn bạn, $customerName. Thông tin đơn hàng:</p>
+                                <ul>
+                                    <li><strong>Tên sản phẩm:</strong> {$row['productName']}</li>
+                                    <li><strong>Giá:</strong> {$row['productPrice']} VNĐ</li>
+                                    <li><strong>Số lượng:</strong> $quantity</li>
+                                    <li><strong>Tổng tiền:</strong> $totalAmount VNĐ</li>
+                                    <li><strong>Địa chỉ nhận hàng:</strong> $address</li>
+                                </ul>
+                            </div>";
+                    } else {
+                        echo "<h3>Thêm thanh toán thất bại. Vui lòng thử lại.</h3>";
+                    }
                 } else {
                     echo "<h3>Thêm chi tiết đơn hàng thất bại. Vui lòng thử lại.</h3>";
                 }

@@ -1,4 +1,4 @@
-Djdj Jdue
+<!-- All product detail when you click the product -->
 <link rel="stylesheet" href="css/productDetail.css" />
 <div class="prd-block">
 
