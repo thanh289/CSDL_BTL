@@ -163,7 +163,7 @@
     <!-- Pagination links -->
     <div class="pagination">
         <?php if ($page > 1): ?>
-            <a href="?productId=<?php echo $productId; ?>&page=<?php echo $page - 1; ?>">Previous</a>
+            <a href="mainCustomer.php?page_layout=productDetail&productId=<?php echo $productId; ?>&page=<?php echo $page - 1; ?>">Previous</a>
         <?php endif; ?>
 
         <?php
@@ -171,13 +171,13 @@
                 if ($i == $page) {
                     echo '<span class="current-page">' . $i . '</span>';
                 } else {
-                    echo '<a href="?productId=' . $productId . '&page=' . $i . '">' . $i . '</a>';
+                    echo '<a href="mainCustomer.php?page_layout=productDetail&productId=' . $productId . '&page=' . $i . '">' . $i . '</a>';
                 }
             }
         ?>
 
         <?php if ($page < $totalPages): ?>
-            <a href="?productId=<?php echo $productId; ?>&page=<?php echo $page + 1; ?>">Next</a>
+            <a href="mainCustomer.php?page_layout=productDetail&productId=<?php echo $productId; ?>&page=<?php echo $page + 1; ?>">Next</a>
         <?php endif; ?>
     </div>
 </div>
