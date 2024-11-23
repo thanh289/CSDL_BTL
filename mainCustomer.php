@@ -58,8 +58,7 @@
                             case 'productDetail':   include_once('function/product/productDetail.php');break;
                             case 'product':         include_once('function/product/product.php');break;
                             case 'search':          include_once('search.php');break;
-                            case 'shoppingCart':    include_once('function/shoppingCart/shoppingCart.php');break;
-                            case 'buyProduct':      include_once('function/shoppingCart/buyProduct.php');break;
+                            case 'buyProduct':      include_once('function/cart/buyProduct.php');break;
                             default:
                                 include_once('function/product/specialProduct.php');
                                 include_once('function/product/newProduct.php');

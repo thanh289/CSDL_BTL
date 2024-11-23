@@ -1,4 +1,4 @@
-<!-- All product detail when you click the product -->
+Djdj Jdue
 <link rel="stylesheet" href="css/productDetail.css" />
 <div class="prd-block">
 
@@ -41,7 +41,7 @@
                 </tr>
             </table>
             <p class="add-cart">
-                <a href="function/shoppingCart/addProduct.php?productId=<?php echo $row['productId'] ?>">
+                <a href="mainCustomer.php?page_layout=buyProduct&productId=<?php echo $row['productId'] ?>">
                     <span>Đặt mua</span>
                 </a>
             </p>
