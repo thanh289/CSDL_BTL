@@ -1,20 +1,42 @@
-#pagination{
-	width: 870px;
-	height: auto;
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 12px;
-	font-weight: bold;
-	word-spacing: 5px;
-	text-align: right;
-	margin-right: 20px;
-	margin-bottom: 20px;
+#pagination {
+    width: 870px;
+    height: auto;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    word-spacing: 5px;
+    text-align: right;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #f8f9fd; 
+    border-radius: 8px; 
 }
-	
-#pagination span{
-	color: #007f49;
-}	
-	
-#pagination a{
-	text-decoration: none;
-	color: #000;
-}	
+
+#pagination span {
+    color: #007f49;
+}
+
+#pagination a {
+    text-decoration: none;
+    color: #007f49;
+    padding: 8px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: 0.3s ease, color 0.3s ease; 
+}
+
+#pagination a:hover {
+    background-color: #007f49; 
+    color: #fff; 
+}
+
+#pagination a.active {
+    background-color: #007f49; 
+    color: #fff;
+}
+
+#pagination a.disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}

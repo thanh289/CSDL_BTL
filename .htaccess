@@ -1,0 +1,5 @@
+RewriteEngine On
+
+# Chuyển hướng .html thành .php
+RewriteRule ^mainCustomer\.html$ mainCustomer.php
+RewriteRule ^loai-hang/([0-9]+)/([a-zA-Z0-9-]+)$ mainCustomer.php?page_layout=product&productLineId=$1&productLineName=$2 [L]
