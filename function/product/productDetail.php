@@ -137,6 +137,7 @@
 
         while($row = $cmtList->fetch_assoc()){
     ?>
+        <div class="comment-list">
             <ul>
                 <li class="com-title"><?php echo $row['customerName'] ?><br />
                 <span>
@@ -148,6 +149,8 @@
                 </span></li>
                 <li class="com-details"><?php echo $row['comment']; ?></li>
             </ul>
+        </div>
+            
     <?php
         }
 
