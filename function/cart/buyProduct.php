@@ -80,7 +80,8 @@
             $email = $_POST['email'];
             $address = $_POST['address'];
             $quantity = $_POST['quantity']; 
-            $totalPrice = $row['productPrice'] * $quantity;
+            $totalPrice = floatval($row['productPrice']) * intval($quantity);
+
             
 
             //Kiểm tra xem đã có khách hàng này chưa

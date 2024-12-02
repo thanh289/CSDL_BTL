@@ -1,5 +1,19 @@
 RewriteEngine On
 
-# Chuyển hướng .html thành .php
-RewriteRule ^mainCustomer\.html$ mainCustomer.php
-RewriteRule ^loai-hang/([0-9]+)/([a-zA-Z0-9-]+)$ mainCustomer.php?page_layout=product&productLineId=$1&productLineName=$2 [L]
+DirectoryIndex index.html
+
+RewriteRule ^home$ /index.html
+
+# Bật Rewrite Engine
+RewriteEngine On
+
+# Chuyển hướng HTTP sang HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+
+# Nếu URL không phải thư mục hoặc file thực tế
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Thêm đuôi .php tự động
+RewriteRule ^(.*)$ $1.php [L]
