@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: web_csdl
+-- Host: localhost    Database: web_csdl
 -- ------------------------------------------------------
 -- Server version	8.0.39
 
@@ -33,7 +33,7 @@ CREATE TABLE `comment` (
   KEY `fk_comment_customer_idx` (`customerNumber`),
   CONSTRAINT `fk_comment_customer` FOREIGN KEY (`customerNumber`) REFERENCES `customers` (`customerNumber`),
   CONSTRAINT `fk_comment_product` FOREIGN KEY (`productId`) REFERENCES `product` (`productId`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `comment` (
 
 LOCK TABLES `comment` WRITE;
 /*!40000 ALTER TABLE `comment` DISABLE KEYS */;
-INSERT INTO `comment` VALUES (7,32,2,'hello','2024-11-23 22:38:39'),(8,28,3,'oke','2024-11-23 22:41:18'),(9,28,3,'dc nhe','2024-11-23 22:41:26'),(10,28,3,'ngon','2024-11-23 22:41:45'),(11,28,3,'fsdffds','2024-11-23 22:41:51'),(12,28,3,'dfsfsd','2024-11-23 22:42:08'),(13,28,3,'sdfsdf','2024-11-23 22:42:19');
+INSERT INTO `comment` VALUES (7,32,5,'sản phẩm tốt','2024-11-23 22:07:04'),(8,32,5,'nice','2024-11-23 22:38:48'),(9,1,5,'nice','2024-11-23 22:39:30'),(10,1,5,'sản phẩm tốt','2024-11-23 22:40:00'),(11,1,5,'sản phẩm tốt','2024-11-23 22:40:41'),(12,1,5,'hayyy','2024-11-23 22:51:03'),(13,1,5,'hay\r\n','2024-11-23 22:51:12'),(14,1,5,'niceee','2024-11-23 22:51:23');
 /*!40000 ALTER TABLE `comment` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-12-02 13:30:38
+-- Dump completed on 2024-12-04 11:02:28

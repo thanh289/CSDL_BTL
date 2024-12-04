@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: web_csdl
+-- Host: localhost    Database: web_csdl
 -- ------------------------------------------------------
 -- Server version	8.0.39
 
@@ -29,7 +29,7 @@ CREATE TABLE `orders` (
   PRIMARY KEY (`orderNumber`),
   KEY `fk_order_customer_idx` (`customerNumber`),
   CONSTRAINT `fk_order_customer` FOREIGN KEY (`customerNumber`) REFERENCES `customers` (`customerNumber`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `orders` (
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
-INSERT INTO `orders` VALUES (1,'2024-11-24',1),(2,'2024-11-23',2),(3,'2024-11-23',2),(4,'2024-11-23',2),(5,'2024-11-23',3),(6,'2024-11-23',3),(7,'2024-11-23',3),(8,'2024-11-23',4),(9,'2024-11-23',2),(10,'2024-11-23',2),(11,'2024-11-23',2),(12,'2024-11-24',5),(13,'2024-11-24',6);
+INSERT INTO `orders` VALUES (1,'2024-11-24',1),(2,'2024-11-23',2),(3,'2024-11-23',2),(4,'2024-11-23',2),(5,'2024-11-23',3),(6,'2024-11-23',3),(7,'2024-11-23',4),(8,'2024-11-23',4),(9,'2024-11-23',4),(10,'2024-11-23',5),(11,'2024-11-23',6),(12,'2024-11-23',4),(13,'2024-11-23',3),(14,'2024-11-23',5),(15,'2024-11-23',5),(16,'2024-11-24',3),(17,'2024-12-04',7),(18,'2024-12-04',7),(19,'2024-12-04',7),(20,'2024-12-04',4);
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-12-02 13:30:39
+-- Dump completed on 2024-12-04 11:02:28

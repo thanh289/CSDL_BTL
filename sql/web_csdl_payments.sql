@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: web_csdl
+-- Host: localhost    Database: web_csdl
 -- ------------------------------------------------------
 -- Server version	8.0.39
 
@@ -40,7 +40,7 @@ CREATE TABLE `payments` (
 
 LOCK TABLES `payments` WRITE;
 /*!40000 ALTER TABLE `payments` DISABLE KEYS */;
-INSERT INTO `payments` VALUES (1,'2024-11-24',115000,1),(2,'2024-11-23',64000,9),(2,'2024-11-23',64000,10),(2,'2024-11-23',160000,11),(5,'2024-11-24',854000,12),(6,'2024-11-24',427000,13);
+INSERT INTO `payments` VALUES (1,'2024-11-24',115000,1),(3,'2024-11-23',427000,6),(4,'2024-11-23',427000,7),(4,'2024-11-23',427000,8),(4,'2024-11-23',427000,9),(5,'2024-11-23',599000,10),(6,'2024-11-23',599000,11),(4,'2024-11-23',115000,12),(3,'2024-11-23',115000,13),(5,'2024-11-23',115000,14),(5,'2024-11-23',115000,15),(7,'2024-12-04',569050,17),(7,'2024-12-04',569050,18),(7,'2024-12-04',569050,19),(4,'2024-12-04',1138100,20);
 /*!40000 ALTER TABLE `payments` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-12-02 13:30:38
+-- Dump completed on 2024-12-04 11:02:28
