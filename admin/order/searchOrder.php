@@ -3,7 +3,6 @@
     $dbUsername = 'TFT';
     $dbPassword = 'Fongngu123';
     $dbName = 'web_csdl';
-
     $conn = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName);
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
@@ -14,23 +13,31 @@
     $rowsPerPage = 10;
     $perRow = ($page - 1) * $rowsPerPage;
 
-    $sql = "SELECT o.orderNumber, o.customerNumber, o.orderDate, 
-                od.productId, od.quantityOrdered
-            FROM orders AS o
-            JOIN orderDetail AS od ON o.orderNumber = od.orderNumber
-            WHERE o.customerNumber LIKE '%$searchText%'
-            OR od.productId LIKE '%$searchText%'
+    $sql = "SELECT o.orderNumber, o.orderDate, od.productId, od.quantityOrdered, 
+                   c.customerName, c.phone, c.address
+            FROM orders o
+            JOIN orderDetail od ON o.orderNumber = od.orderNumber
+            JOIN customers c ON o.customerNumber = c.customerNumber
+            WHERE o.orderNumber LIKE '%$searchText%' 
+            OR c.customerName LIKE '%$searchText%'
+            OR c.phone LIKE '%$searchText%'
+            OR c.address LIKE '%$searchText%'
+            OR od.productId LIKE '%$searchText%' 
             OR o.orderDate LIKE '%$searchText%'
             LIMIT $perRow, $rowsPerPage";
 
     $result1 = $conn->query($sql);
 
     $sqlTotal = "SELECT COUNT(*) AS totalRows 
-                FROM orders AS o
-                JOIN orderDetail AS od ON o.orderNumber = od.orderNumber
-                WHERE o.customerNumber LIKE '%$searchText%'
-                    OR od.productId LIKE '%$searchText%'
-                    OR o.orderDate LIKE '%$searchText%'";
+                FROM orders o
+                JOIN orderDetail od ON o.orderNumber = od.orderNumber
+                JOIN customers c ON o.customerNumber = c.customerNumber
+                WHERE o.orderNumber LIKE '%$searchText%' 
+                OR c.customerName LIKE '%$searchText%'
+                OR c.phone LIKE '%$searchText%'
+                OR c.address LIKE '%$searchText%'
+                OR od.productId LIKE '%$searchText%' 
+                OR o.orderDate LIKE '%$searchText%'";
     $resultTotal = $conn->query($sqlTotal);
     $totalRows = $resultTotal->fetch_assoc()['totalRows'];
     $totalPage = ceil($totalRows / $rowsPerPage);
@@ -41,7 +48,6 @@
 <h2>Tìm kiếm đơn hàng</h2>
 
 <div id="main">
-    
     <div id="search-bar">
         <form method="get" name="sform" action="mainAdmin.php">
             <input type="hidden" name="page_layout" value="searchOrder">
@@ -52,10 +58,12 @@
     <table id="orders" cellpadding="0" cellspacing="0" width="100%">
         <tr id="order-bar">
             <td width="10%">Mã đơn hàng</td>
-            <td width="15%">Mã khách hàng</td>
+            <td width="15%">Tên khách hàng</td>
+            <td width="15%">Số điện thoại</td>
+            <td width="20%">Địa chỉ</td>
             <td width="20%">Ngày đặt hàng</td>
             <td width="10%">Mã sản phẩm</td>
-            <td width="15%">Số lượng</td>
+            <td width="10%">Số lượng</td>
         </tr>
         <?php
             if ($result1->num_rows > 0) {
@@ -63,7 +71,9 @@
         ?>
         <tr>
             <td><?php echo $row['orderNumber']; ?></td>
-            <td><?php echo $row['customerNumber']; ?></td>
+            <td><?php echo $row['customerName']; ?></td>
+            <td><?php echo $row['phone']; ?></td>
+            <td><?php echo $row['address']; ?></td>
             <td><?php echo $row['orderDate']; ?></td>
             <td><?php echo $row['productId']; ?></td>
             <td><?php echo $row['quantityOrdered']; ?></td>
@@ -71,7 +81,7 @@
         <?php
                 }
             } else {
-                echo '<tr><td colspan="5">Không tìm thấy kết quả nào!</td></tr>';
+                echo '<tr><td colspan="7">Không tìm thấy kết quả nào!</td></tr>';
             }
         ?>
     </table>

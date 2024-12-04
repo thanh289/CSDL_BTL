@@ -8,18 +8,17 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    if (isset($_GET['page'])) {
-        $page = $_GET['page'];
-    } else {
-        $page = 1;
-    }
+    $page = isset($_GET['page']) ? $_GET['page'] : 1;
     $rowsPerPage = 10;
     $perRow = $page * $rowsPerPage - $rowsPerPage;
 
-    $sql = "SELECT o.orderNumber, o.customerNumber, o.orderDate, od.productId, od.quantityOrdered 
+    $sql = "SELECT o.orderNumber, o.orderDate, od.productId, od.quantityOrdered, 
+                   c.customerName, c.phone, c.address
             FROM orders o
             INNER JOIN orderDetail od ON o.orderNumber = od.orderNumber
+            INNER JOIN customers c ON o.customerNumber = c.customerNumber
             LIMIT $perRow, $rowsPerPage";
+
     $result1 = $conn->query($sql);
 ?>
 
@@ -28,20 +27,22 @@
 <h2>Quản lí đơn hàng</h2>
 
 <div id="main">
-
     <div id="search-bar">
-            <form method="get" name="sform" action="mainAdmin.php">
-                <input type="hidden" name="page_layout" value="searchOrder" >
-                <input type="text" name="stext" placeholder="Tìm kiếm đơn hàng">
-            </form>
+        <form method="get" name="sform" action="mainAdmin.php">
+            <input type="hidden" name="page_layout" value="searchOrder">
+            <input type="text" name="stext" placeholder="Tìm kiếm đơn hàng">
+        </form>
     </div>
+
     <table id="orders" cellpadding="0" cellspacing="0" width="100%">
         <tr id="order-bar">
             <td width="10%">Mã đơn hàng</td>
-            <td width="15%">Mã khách hàng</td>
+            <td width="15%">Tên khách hàng</td>
+            <td width="15%">Số điện thoại</td>
+            <td width="20%">Địa chỉ</td>
             <td width="20%">Ngày đặt hàng</td>
             <td width="10%">Mã sản phẩm</td>
-            <td width="15%">Số lượng</td>
+            <td width="10%">Số lượng</td>
         </tr>
         <?php
             if ($result1->num_rows > 0) {
@@ -49,7 +50,9 @@
         ?>
         <tr>
             <td><?php echo $row['orderNumber']; ?></td>
-            <td><?php echo $row['customerNumber']; ?></td>
+            <td><?php echo $row['customerName']; ?></td>
+            <td><?php echo $row['phone']; ?></td>
+            <td><?php echo $row['address']; ?></td>
             <td><?php echo $row['orderDate']; ?></td>
             <td><?php echo $row['productId']; ?></td>
             <td><?php echo $row['quantityOrdered']; ?></td>
