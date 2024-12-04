@@ -20,7 +20,7 @@
 - Link trải nghiệm : [web](http://csdl-btl.kesug.com/?i=1).
 
 Customer : 
-- 
+- Mua hàng và đưa ra góp ý cho người bán
 
 Admin :
 - Thêm, xoá, sửa các loại sản phẩm vào cửa hàng.
@@ -29,14 +29,4 @@ Admin :
 
 ## Database
 ![database jpg](https://github.com/user-attachments/assets/5ce5ed0a-b697-49f1-aa2e-636a62c8224a)
-
-
-## Cách cài đặt
-
-1. Trải nghiệm web ở [web](http://csdl-btl.kesug.com/?i=1).
-   
-2. Thêm xoá sửa code :
-- Cài đặt XAMPP : [link hướng dẫn](https://www.youtube.com/watch?v=IIKOHBi3SU8&list=PLyxSzL3F7487f2BrlHKg87WlUEennWOKu).
-- Bạn hãy clone về ở thư mục xampp/htdocs.
-- Sau đó mở trình duyệt web http://localhost/database/index.php.
 
