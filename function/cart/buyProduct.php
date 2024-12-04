@@ -25,7 +25,7 @@
         </div>	
         <div class="prd-intro">
         	<h3><?php echo $row['productName'] ?></h3>
-            <p>Giá sản phẩm: <span><?php echo $row['productPrice'] ?> VNĐ</span></p>
+            <p>Giá sản phẩm: <span><?php echo $row['productPrice']*(100 -(int)$row['promotion']) / 100 ?> VNĐ</span></p>
         	<table>
             	<tr>
                 	<td width="30%"><span>Bảo hành:</span></td>
@@ -80,7 +80,7 @@
             $email = $_POST['email'];
             $address = $_POST['address'];
             $quantity = $_POST['quantity']; 
-            $totalPrice = floatval($row['productPrice']) * intval($quantity);
+            $totalPrice = floatval($row['productPrice']*(100 -(int)$row['promotion']) / 100) * intval($quantity);
 
             
 
@@ -113,17 +113,18 @@
             if ($conn->query($sqlOrderDetail) === TRUE) {
                 // ** Thêm vào bảng payments **
             $paymentDate = date('Y-m-d'); // Ngày thanh toán hiện tại
-            $totalAmount = $row['productPrice'] * $quantity;
+            $totalAmount = ($row['productPrice']*(100 -(int)$row['promotion']) / 100) * $quantity;
 
             $sqlPayment = "INSERT INTO payments (customerNumber, paymentDate, amount, orderNumber) 
                        VALUES ($customerNumber, '$paymentDate', $totalAmount, $orderNumber)";
             if ($conn->query($sqlPayment) === TRUE) {
+                $productPrice = $row['productPrice']*(100 -(int)$row['promotion'])/100; 
                 echo "<div class='order-success'>
                     <h3>Đặt hàng và thanh toán thành công!</h3>
                     <p>Cảm ơn bạn, $customerName. Thông tin đơn hàng:</p>
                     <ul>
                         <li><strong>Tên sản phẩm:</strong> {$row['productName']}</li>
-                        <li><strong>Giá:</strong> {$row['productPrice']} VNĐ</li>
+                        <li><strong>Giá:</strong> {$productPrice} VNĐ</li>
                         <li><strong>Số lượng:</strong> $quantity</li>
                         <li><strong>Tổng tiền:</strong> $totalAmount VNĐ</li>
                         <li><strong>Địa chỉ nhận hàng:</strong> $address</li>

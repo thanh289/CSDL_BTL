@@ -18,7 +18,7 @@
                     </h3>
                     <p>Bảo hành: <?php echo $row['guarantee'] ?></p>
                     <p class="price">
-                        <span>Giá: <?php echo $row['productPrice'] ?> VNĐ</span>
+                        <span>Giá: <?php echo $row['productPrice']*(100 -(int)$row['promotion']) / 100 ?> VNĐ</span>
                     </p>
                 </div>
         <?php

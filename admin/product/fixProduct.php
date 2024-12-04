@@ -66,7 +66,7 @@
             <!-- Price -->
             <tr>
                 <td>
-                    <label>Giá</label><br/>
+                    <label>Giá gốc</label><br/>
                     <input type="text" name="productPrice" value="<?php if(isset($_POST['productPrice'])){echo $_POST['productPrice'];}else{echo $arr['productPrice'];}?>" /> VND
                     <?php if(isset($error_price)){echo $error_price;}?>
                 </td>

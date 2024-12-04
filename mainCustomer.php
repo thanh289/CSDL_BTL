@@ -34,6 +34,13 @@
                     }
                 ?>
             </div>
+            <!-- Add Sales Off Product -->
+            <li id="menu-sales-off">
+                <a href="mainCustomer.php?page_layout=saleOffProduct">Sản phẩm giảm giá</a>
+            </li>
+            <li id="menu-hot-product">
+                <a href="mainCustomer.php?page_layout=hotProduct">Sản phẩm bán chạy</a>
+            </li>
         </li>
         </ul>
         <div id="search-bar">
@@ -59,6 +66,8 @@
                             case 'product':         include_once('function/product/product.php');break;
                             case 'search':          include_once('search.php');break;
                             case 'buyProduct':      include_once('function/cart/buyProduct.php');break;
+                            case 'saleOffProduct':  include_once('function/product/saleOffProduct.php');break;
+                            case 'hotProduct':      include_once('function/product/hotProduct.php');break;
                             default:
                                 include_once('function/product/specialProduct.php');
                                 include_once('function/product/newProduct.php');

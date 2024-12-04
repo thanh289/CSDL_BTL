@@ -1,9 +1,9 @@
-<div class="prd-block">
-    <h2>Sản phẩm đặc biệt</h2>
+<div class="sPrd-block">
+    <h2>Sản phẩm giảm giá</h2>
     <div class="pr-list">
         <!-- Show the first 6 special product -->
         <?php
-            $sql = "SELECT * FROM product WHERE special = 1 ORDER BY productId DESC LIMIT 6";
+            $sql = "SELECT * FROM product WHERE promotion > 0";
             $result = $conn->query($sql);
             while($row = $result->fetch_assoc()){
         ?>

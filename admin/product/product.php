@@ -46,7 +46,7 @@
     	<tr id="prd-bar">
         	<td width="5%">ID</td>
             <td width="40%">Tên sản phẩm</td>
-            <td width="15%">Giá</td>
+            <td width="15%">Giá gốc</td>
             <td width="20%">Phân loại</td>
             <td width="10%">Ảnh</td>
             <td width="4%">Sửa</td>

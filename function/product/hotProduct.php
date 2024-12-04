@@ -1,9 +1,12 @@
-<div class="prd-block">
-    <h2>Sản phẩm đặc biệt</h2>
+<div class="sPrd-block">
+    <h2>Sản phẩm bán chạy</h2>
     <div class="pr-list">
-        <!-- Show the first 6 special product -->
         <?php
-            $sql = "SELECT * FROM product WHERE special = 1 ORDER BY productId DESC LIMIT 6";
+            $sql = "SELECT p.* FROM orderDetail od
+			JOIN orders o on od.orderNumber = o.orderNumber
+            JOIN product p on od.productId = p.productId
+            group by p.productId
+            ORDER BY sum(od.quantityOrdered) DESC LIMIT 6";
             $result = $conn->query($sql);
             while($row = $result->fetch_assoc()){
         ?>

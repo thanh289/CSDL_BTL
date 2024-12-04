@@ -14,7 +14,7 @@
         </div>	
         <div class="prd-intro">
         	<h3><?php echo $row['productName'] ?></h3>
-            <p>Giá sản phẩm: <span><?php echo $row['productPrice'] ?> VNĐ</span></p>
+            <p>Giá sản phẩm: <span><?php echo $row['productPrice']*(100 -(int)$row['promotion']) / 100 ?> VNĐ</span></p>
         	<table>
             	<tr>
                 	<td width="30%"><span>Bảo hành:</span></td>
@@ -26,7 +26,7 @@
                 </tr>
                 <tr>
                 	<td><span>Khuyến Mại:</span></td>
-                    <td><?php echo $row['promotion'] ?></td>
+                    <td><?php echo $row['promotion'] ?>%</td>
                 </tr>
                 <tr>
                 	<td><span>Còn hàng:</span></td>
