@@ -40,13 +40,3 @@ Admin :
 - Bạn hãy clone về ở thư mục xampp/htdocs.
 - Sau đó mở trình duyệt web http://localhost/database/index.php.
 
-## DEMO
-
-- Login Page :
-  ![login](https://drive.google.com/uc?id=15-i6JpdVBzMj6tI91uWBgYl67Wi6nxYi)
-- Customer - Home Page :
-  ![customer](https://drive.google.com/uc?id=1D0JQgI7nGbMCVkTLKescljEdrq3nnh_H)
-- Admin
-  ![admin](https://drive.google.com/uc?id=1aVMBvFvb4Q0UlfPsyiBQuAJs7PE3-GB9)
-
-  Nguồn tham khảo: Youtube
