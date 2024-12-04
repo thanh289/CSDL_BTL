@@ -33,7 +33,7 @@ CREATE TABLE `comment` (
   KEY `fk_comment_customer_idx` (`customerNumber`),
   CONSTRAINT `fk_comment_customer` FOREIGN KEY (`customerNumber`) REFERENCES `customers` (`customerNumber`),
   CONSTRAINT `fk_comment_product` FOREIGN KEY (`productId`) REFERENCES `product` (`productId`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-12-04 11:02:28
+-- Dump completed on 2024-12-04 18:17:34
