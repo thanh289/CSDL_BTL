@@ -9,13 +9,15 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
-
     $page = isset($_GET['page']) ? $_GET['page'] : 1;
     $rowsPerPage = 10;
     $perRow = ($page - 1) * $rowsPerPage;
 
-    $sql = "SELECT customerNumber, paymentDate, amount, orderNumber 
-            FROM payments 
+    // Cập nhật SQL với JOIN để lấy thông tin từ bảng customers
+    $sql = "SELECT payments.paymentDate, payments.amount, payments.orderNumber, 
+                   customers.customerName, customers.phone, customers.address
+            FROM payments
+            JOIN customers ON payments.customerNumber = customers.customerNumber
             LIMIT $perRow, $rowsPerPage";
     $result1 = $conn->query($sql);
 
@@ -39,7 +41,9 @@
 
     <table id="payments" cellpadding="0" cellspacing="0" width="100%">
         <tr id="payment-bar">
-            <td>Mã KH</td>
+            <td>Họ và tên KH</td>
+            <td>Điện thoại</td>
+            <td>Địa chỉ</td>
             <td>Ngày thanh toán</td>
             <td>Số tiền</td>
             <td>Mã đơn hàng</td>
@@ -49,7 +53,9 @@
             while ($row = $result1->fetch_assoc()) {
         ?>
         <tr>
-            <td><?php echo $row['customerNumber']; ?></td>
+            <td><?php echo $row['customerName']; ?></td>
+            <td><?php echo $row['phone']; ?></td>
+            <td><?php echo $row['address']; ?></td>
             <td><?php echo $row['paymentDate']; ?></td>
             <td><?php echo $row['amount']; ?></td>
             <td><?php echo $row['orderNumber']; ?></td>
