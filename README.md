@@ -21,6 +21,7 @@
 
 Customer : 
 - Mua hàng và đưa ra góp ý cho người bán
+- Mua hàng sẽ hiện các sản phẩm tương tự nổi bật
 
 Admin :
 - Thêm, xoá, sửa các loại sản phẩm vào cửa hàng.
