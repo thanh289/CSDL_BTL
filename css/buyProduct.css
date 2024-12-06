@@ -141,3 +141,28 @@
 .clear {
     clear: both;
 }
+
+.related-products {
+    margin-top: 20px;
+}
+.related-products h3 {
+    margin-bottom: 10px;
+}
+.related-products ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+.related-products ul li {
+    width: 150px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+.related-products ul li img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
