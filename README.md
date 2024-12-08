@@ -45,9 +45,29 @@ Admin :
 
 ## Demo
 
-![Localhost](https://github.com/user-attachments/assets/ebbada67-fd19-4daf-8235-74544ac0b825)
+Admin
 
-![Admin](https://github.com/user-attachments/assets/f3c560b3-ac9a-4fbc-a890-5aa35f035364)
+![Admin khach hang](https://github.com/user-attachments/assets/3ab81502-e112-4b6c-a73b-a4c727ba7948)
 
-![Customer](https://github.com/user-attachments/assets/392c9d2c-2629-4853-93b9-1dd4674217c8)
+![Admin loai san pham](https://github.com/user-attachments/assets/94764946-3455-473b-9b34-5356cf46bd94)
+
+![Admin order](https://github.com/user-attachments/assets/9cb5c35c-d42e-4bbb-9eba-fbbcca01d474)
+
+![Admin san pham](https://github.com/user-attachments/assets/6a223f9b-4192-4f0d-9026-c871644deadf)
+
+![Admin thanh toán](https://github.com/user-attachments/assets/8e80a007-79b2-4674-ac1e-b34fab921e28)
+
+Customer
+![Customer loại hàng](https://github.com/user-attachments/assets/5f4ddbfd-0817-4527-b310-0cf84074b172)
+
+![Customer sản phẩm bán chạy](https://github.com/user-attachments/assets/f0814aaf-d1bc-4128-a936-1286490f11b1)
+
+![Customer sản phẩm giảm giá](https://github.com/user-attachments/assets/a8f6fd3f-efa1-4e77-b48d-045a0e4170bb)
+
+![Customer sản phẩm](https://github.com/user-attachments/assets/0d472e3f-4e7e-4c5e-b342-2743bcdb7fa9)
+
+![Customer tìm kiếm](https://github.com/user-attachments/assets/f45e4d87-1c3f-4203-a440-7956b1aed178)
+
+
+
 
