@@ -19,7 +19,7 @@
     }
     $rowsPerPage = 10;
     $perRow = $page * $rowsPerPage - $rowsPerPage;
-    $sql = "SELECT * FROM product INNER JOIN productLine ON product.productLineId = productLine.productLineId LIMIT $perRow, $rowsPerPage";
+    $sql = "SELECT * FROM product INNER JOIN productLine ON product.productLineId = productLine.productLineId ORDER BY product.productId LIMIT $perRow, $rowsPerPage ";
     $result1 = $conn->query($sql);
 ?>
 

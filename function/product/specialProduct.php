@@ -3,7 +3,7 @@
     <div class="pr-list">
         <!-- Show the first 6 special product -->
         <?php
-            $sql = "SELECT * FROM product WHERE special = 1 ORDER BY productId DESC LIMIT 6";
+            $sql = "SELECT * FROM product WHERE special = 1 ORDER BY productId DESC";
             $result = $conn->query($sql);
             while($row = $result->fetch_assoc()){
         ?>
