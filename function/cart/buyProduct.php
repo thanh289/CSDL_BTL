@@ -139,7 +139,7 @@
               </div>";
     }
     ?>
-
+    <div class="divider"></div> 
     <?php
     // Truy vấn sản phẩm liên quan dựa trên orderDetail và product
     $relatedProductsSql = "
