@@ -81,10 +81,10 @@
         
         
         //  Check and Insert into MySQL
-        if(isset($productName) && is_numeric($productPrice) && isset($guarantee) && isset($accessory) && isset($promotion) && is_numeric($inStock) && isset($detail) && isset($productImage) && is_numeric($productLineId) && is_numeric($special)){
+        if(isset($productName) && is_numeric($productPrice) && isset($guarantee) && isset($accessory) && is_numeric($promotion) && is_numeric($inStock) && isset($detail) && isset($productImage) && is_numeric($productLineId) && is_numeric($special)){
             move_uploaded_file($tmp, 'image/'.$productImage);
             $sql = "INSERT INTO product (productName, productPrice, guarantee, accessory, promotion, detail, productImage, productLineId, inStock, special) 
-                VALUES ('$productName', $productPrice, '$guarantee', '$accessory', '$promotion', '$detail', '$productImage', $productLineId, $inStock, $special)";
+                VALUES ('$productName', $productPrice, '$guarantee', '$accessory', $promotion, '$detail', '$productImage', $productLineId, $inStock, $special)";
             
             if ($conn->query($sql) == TRUE) {
                 echo "Thêm thành công!";
@@ -92,7 +92,7 @@
                 echo "Error updating record: " . $conn->error;
             }
         } else {
-            echo "dumb";
+            echo "Thêm không thành công";
         }
     }
 ?>

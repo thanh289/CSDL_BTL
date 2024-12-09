@@ -3,7 +3,7 @@
     <div class="pr-list">
         <!-- Show the 6 newest product -->
         <?php
-            $sql = "SELECT * FROM product ORDER BY productId DESC LIMIT 6";
+            $sql = "SELECT * FROM product ORDER BY productId DESC LIMIT 8";
             $result = $conn->query($sql);
             while($row = $result->fetch_assoc()){
         ?>
