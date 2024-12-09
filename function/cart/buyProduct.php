@@ -140,8 +140,6 @@
     }
     ?>
 
-    <div class="divider"></div>
-
     <?php
     // Truy vấn sản phẩm liên quan dựa trên orderDetail và product
     $relatedProductsSql = "
@@ -157,46 +155,31 @@
     $relatedProducts = $stmt->get_result();
 
     if ($relatedProducts->num_rows > 0) {
-?>
-    <div class="related-products">
-        <h3>Sản phẩm liên quan:</h3>
-        <!-- Swiper container -->
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <?php
-                while ($row = $relatedProducts->fetch_assoc()) {
-                ?>
-                    <div class="swiper-slide">
-                        <div class="prd-item">
-                            <a href="mainCustomer.php?page_layout=productDetail&productId=<?php echo $row['productId'] ?>">
-                                <img src="admin/image/<?php echo $row['productImage'] ?>" />
-                            </a>
-                            <h3>
-                                <a href="mainCustomer.php?page_layout=productDetail&productId=<?php echo $row['productId'] ?>">
-                                    <?php echo $row['productName'] ?>
-                                </a>
-                            </h3>
-                            <p>Bảo hành: <?php echo $row['guarantee'] ?></p>
-                            <p class="price">
-                                <span>Giá: <?php echo $row['productPrice'] ?> VNĐ</span>
-                            </p>
-                        </div>
-                    </div>
-                <?php
-                }
-                ?>
+        echo "<div class='related-products'>
+            <h3>Sản phẩm liên quan:</h3>
+            <ul>";
+        while ($row = $relatedProducts->fetch_assoc()) {
+            ?>
+            <div class="prd-item">
+                <a href="mainCustomer.php?page_layout=productDetail&productId=<?php echo $row['productId'] ?>">
+                    <img src="admin/image/<?php echo $row['productImage'] ?>">
+                </a>
+                <h3>
+                    <a href="mainCustomer.php?page_layout=productDetail&productId=<?php echo $row['productId'] ?>">
+                        <?php echo $row['productName'] ?>
+                    </a>
+                </h3>
+                <p>Bảo hành: <?php echo $row['guarantee'] ?></p>
+                <p class="price">
+                    <span>Giá: <?php echo $row['productPrice'] ?> VNĐ</span>
+                </p>
             </div>
-            <!-- Nút điều hướng -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
-    </div>
-<?php
+    <?php
+        }
+        echo "</ul></div>";
     } else {
         echo "<p>Không có sản phẩm liên quan.</p>";
     }
-?>
-
+    ?>
 
 </div>
-
