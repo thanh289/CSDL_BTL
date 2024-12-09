@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
 --
--- Host: localhost    Database: web_csdl
+-- Host: 127.0.0.1    Database: web_csdl
 -- ------------------------------------------------------
 -- Server version	8.0.39
 
@@ -39,7 +39,7 @@ CREATE TABLE `orderdetail` (
 
 LOCK TABLES `orderdetail` WRITE;
 /*!40000 ALTER TABLE `orderdetail` DISABLE KEYS */;
-INSERT INTO `orderdetail` VALUES (1,1,1),(4,32,2),(5,28,1),(6,28,1),(7,28,1),(8,28,1),(9,28,1),(10,32,1),(11,32,1),(12,1,1),(13,1,1),(14,1,1),(15,1,1),(17,32,1),(18,32,1),(19,32,1),(20,32,2);
+INSERT INTO `orderdetail` VALUES (14,32,5),(15,29,5),(16,20,3),(17,9,10),(18,1,2),(19,4,3),(20,5,3),(21,7,2),(22,8,4),(23,6,1);
 /*!40000 ALTER TABLE `orderdetail` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-12-04 18:17:34
+-- Dump completed on 2024-12-09 14:26:42
