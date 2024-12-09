@@ -39,11 +39,17 @@
                     </td>
                 </tr>
             </table>
-            <p class="add-cart">
-                <a href="mainCustomer.php?page_layout=buyProduct&productId=<?php echo $row['productId'] ?>">
-                    <span>Đặt mua</span>
-                </a>
-            </p>
+            <?php
+                if($stock) {
+            ?>
+                <p class="add-cart">
+                    <a href="mainCustomer.php?page_layout=buyProduct&productId=<?php echo $row['productId'] ?>">
+                        <span>Đặt mua</span>
+                    </a>
+                </p>
+            <?php
+                }
+            ?>
         </div>
         
         <div class="clear"></div>
