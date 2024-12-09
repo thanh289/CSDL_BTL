@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User</title>
     <link rel="stylesheet" href="css/mainCustomer.css"/>
+    <link rel="stylesheet" href="assets/swiper/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -90,6 +91,25 @@
             <p>Dương Anh Tuấn - 23021704</p><br>
             <p>Nguyễn Duy Phong - 23021656</p><br>
     </footer>
+
+    <script src="assets/swiper/swiper-bundle.min.js"></script>
+    <script>
+    const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,  // Số lượng sản phẩm hiển thị cùng lúc
+        spaceBetween: 20,   // Khoảng cách giữa các sản phẩm
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            640: { slidesPerView: 1, spaceBetween: 10 },
+            768: { slidesPerView: 2, spaceBetween: 15 },
+            1024: { slidesPerView: 3, spaceBetween: 20 },
+        },
+    });
+    </script>
+
+
 
 </body>
 </html>
