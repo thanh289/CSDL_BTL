@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
 --
--- Host: localhost    Database: web_csdl
+-- Host: 127.0.0.1    Database: web_csdl
 -- ------------------------------------------------------
 -- Server version	8.0.39
 
@@ -26,7 +26,7 @@ CREATE TABLE `productline` (
   `productLineId` int NOT NULL AUTO_INCREMENT,
   `productLineName` varchar(255) NOT NULL,
   PRIMARY KEY (`productLineId`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -35,7 +35,7 @@ CREATE TABLE `productline` (
 
 LOCK TABLES `productline` WRITE;
 /*!40000 ALTER TABLE `productline` DISABLE KEYS */;
-INSERT INTO `productline` VALUES (1,'Móc khóa'),(2,'Đèn'),(3,'Lego'),(9,'Manga');
+INSERT INTO `productline` VALUES (1,'Moc Khoa'),(2,'Den'),(3,'Lego'),(9,'Truyen Tranh'),(10,'Board Game'),(11,'Blind Box');
 /*!40000 ALTER TABLE `productline` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -48,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-12-04 11:02:28
+-- Dump completed on 2024-12-09 14:26:42

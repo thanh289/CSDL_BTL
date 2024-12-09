@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
 --
--- Host: localhost    Database: web_csdl
+-- Host: 127.0.0.1    Database: web_csdl
 -- ------------------------------------------------------
 -- Server version	8.0.39
 
@@ -29,7 +29,7 @@ CREATE TABLE `customers` (
   `email` varchar(255) NOT NULL,
   `address` varchar(225) NOT NULL,
   PRIMARY KEY (`customerNumber`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `customers` (
 
 LOCK TABLES `customers` WRITE;
 /*!40000 ALTER TABLE `customers` DISABLE KEYS */;
-INSERT INTO `customers` VALUES (1,'tuandepzai','09123456789','tuan@123','hk'),(2,'Tran Duy Thanh','0962640750','tranduythanh2809@gmail.com','Hà Đông'),(3,'sdfsdg','13425678765','2@2','hà nội'),(4,'phong','0912658723','phong@gmail.com','thanh xuân, hà nội'),(5,'phong','0934651788','2@2gmail.com','khương trung, hà nội'),(6,'Tuan','012345678','dtun@gmail.com','Đại học quốc gia Hà Nội'),(7,'phong','0532187423','p@gmail.com','Viet Nam'),(8,'Nguyen Anh','0123456789','nguyen.anh@example.com','Hanoi, Vietnam'),(9,'Tran Minh','0987654321','tran.minh@example.com','Ho Chi Minh City, Vietnam'),(10,'Le Bich','0912345678','le.bich@example.com','Da Nang, Vietnam'),(11,'Pham Quang','0922334455','pham.quang@example.com','Can Tho, Vietnam'),(12,'Nguyen Mai','0933445566','nguyen.mai@example.com','Hue, Vietnam'),(13,'Trinh Thi','0977665544','trinh.thi@example.com','Ha Long, Vietnam'),(14,'Duong Thi','0988776655','duong.thi@example.com','Nha Trang, Vietnam'),(15,'Hoang Thanh','0900123456','hoang.thanh@example.com','Vinh, Vietnam'),(16,'Mai Lan','0911888777','mai.lan@example.com','Sapa, Vietnam'),(17,'Vu Minh','0903445566','vu.minh@example.com','Quang Ninh, Vietnam');
+INSERT INTO `customers` VALUES (7,'Dương Anh Tuấn','0916157297','dtuan3705@gmail.com','Ha Noi'),(8,'Tran Duy Thanh','0988888888','duythanh2809@gmail.com','Ha Dong'),(9,'Tran Duy Phong','0915234354','tranfong611@gmail.com','Ha Tay'),(10,'Anh Sơn','0912300789','sonngu123@gmail.com','Tay Mo'),(11,'Le Tuan','0967289222','tuandz@gmail.com','Ha Tinh');
 /*!40000 ALTER TABLE `customers` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-12-04 18:17:34
+-- Dump completed on 2024-12-09 14:26:42
