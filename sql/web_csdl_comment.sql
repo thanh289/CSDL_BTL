@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: web_csdl
+-- Host: localhost    Database: web_csdl
 -- ------------------------------------------------------
 -- Server version	8.0.39
 
@@ -33,7 +33,7 @@ CREATE TABLE `comment` (
   KEY `fk_comment_customer_idx` (`customerNumber`),
   CONSTRAINT `fk_comment_customer` FOREIGN KEY (`customerNumber`) REFERENCES `customers` (`customerNumber`),
   CONSTRAINT `fk_comment_product` FOREIGN KEY (`productId`) REFERENCES `product` (`productId`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `comment` (
 
 LOCK TABLES `comment` WRITE;
 /*!40000 ALTER TABLE `comment` DISABLE KEYS */;
-INSERT INTO `comment` VALUES (14,32,7,'rat de hong, k nen mua','2024-12-09 13:57:43'),(15,32,7,'hang loi','2024-12-09 13:58:35'),(16,29,7,'Đạo nhái tây du ký trắng trợn','2024-12-09 13:59:29'),(17,9,8,'Robot dỏm vcl','2024-12-09 14:02:06'),(18,9,8,'Moi dung dc 2 hom đã hư rồi, bảo sao bảo hành 48 giờ','2024-12-09 14:02:28'),(19,1,8,'Đặt 2 móc khoá đôi tặng ny sao shop lại gửi 3 cái, làm ny e giận','2024-12-09 14:03:58');
+INSERT INTO `comment` VALUES (14,32,7,'rat de hong, k nen mua','2024-12-09 13:57:43'),(15,32,7,'hang loi','2024-12-09 13:58:35'),(16,29,7,'Đạo nhái tây du ký trắng trợn','2024-12-09 13:59:29'),(17,9,8,'Robot dỏm vcl','2024-12-09 14:02:06'),(18,9,8,'Moi dung dc 2 hom đã hư rồi, bảo sao bảo hành 48 giờ','2024-12-09 14:02:28'),(19,1,8,'Đặt 2 móc khoá đôi tặng ny sao shop lại gửi 3 cái, làm ny e giận','2024-12-09 14:03:58'),(20,47,8,'rat dep','2024-12-15 12:46:01'),(21,45,12,'Robot rat dep va chi tiet','2024-12-15 12:46:50'),(22,44,13,'Den sang va rat de ngu','2024-12-15 12:47:45'),(23,36,14,'Bai rat nhieu va thu vi','2024-12-15 12:48:37'),(24,43,15,'moc khoa rat dep va hop thoi trang','2024-12-15 12:49:43'),(25,20,16,'Mo Hinh rat dep','2024-12-15 12:51:23'),(26,40,17,'rat hay khi choi cung ban be','2024-12-15 12:52:06'),(27,21,18,'hoa gia nhung rat dep','2024-12-15 12:53:19');
 /*!40000 ALTER TABLE `comment` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-12-09 14:26:42
+-- Dump completed on 2024-12-16 13:22:59
